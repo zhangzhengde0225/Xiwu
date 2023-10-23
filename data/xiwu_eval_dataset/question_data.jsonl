@@ -1,0 +1,500 @@
+{"question_id": 1, "category": "hep", "turns": ["How is electrical stability achieved in THGEM detectors when dealing with large charge avalanches?"]}
+{"question_id": 2, "category": "hep", "turns": ["What is the significance of Haag's theorem in the BEH theory?"]}
+{"question_id": 3, "category": "hep", "turns": ["What is the Standard Model (SM) of particle physics and how many neutrinos does it predict?"]}
+{"question_id": 4, "category": "hep", "turns": ["What are the detector performances of JUNO?"]}
+{"question_id": 5, "category": "hep", "turns": ["What is the Interfacial Microfluidic Membrane Processing (IMMP) methodology and how was it used in the experiment?"]}
+{"question_id": 6, "category": "hep", "turns": ["How do CLTDs contribute to heavy ion physics research?"]}
+{"question_id": 7, "category": "hep", "turns": ["What is the relationship between the dimensionless coupling of the SM and the Fermi constant?"]}
+{"question_id": 8, "category": "hep", "turns": ["What types of gauge fields have been reviewed in terms of their associated forces?"]}
+{"question_id": 9, "category": "hep", "turns": ["What are some elements of array programming?"]}
+{"question_id": 10, "category": "hep", "turns": ["Which material of PAF-1, PAF-1-NH_2, and PAF-1-CH_2NH_2 has the strongest capability to interact with CO_2?"]}
+{"question_id": 11, "category": "hep", "turns": ["What is the milestone in SoS studies of astrophysical relevance?"]}
+{"question_id": 12, "category": "hep", "turns": ["What is the trigger rate and peak data rate at the BESIII detector?"]}
+{"question_id": 13, "category": "hep", "turns": ["What is the Gribov-Zwanziger approach?"]}
+{"question_id": 14, "category": "hep", "turns": ["What is the source of anti-particles in the cosmic ray flux?"]}
+{"question_id": 15, "category": "hep", "turns": ["How can metal ions be loaded on CNTs and improve gas permeation in MMMs?"]}
+{"question_id": 16, "category": "hep", "turns": ["How many telescopes are used for the measurement of proton and helium spectrum, and at what zenith angle are they pointed?"]}
+{"question_id": 17, "category": "hep", "turns": ["How is the transition from quarks to hadrons mentioned in the context of probing the extreme ultraviolet physics?"]}
+{"question_id": 18, "category": "hep", "turns": ["How does Carpet-2 detect extensive air showers?"]}
+{"question_id": 19, "category": "hep", "turns": ["Where has the idea of using RIB beams for image-guided particle therapy been implemented?"]}
+{"question_id": 20, "category": "hep", "turns": ["What does the level of the cosmogenic neutrino flux indicate?"]}
+{"question_id": 21, "category": "hep", "turns": ["What is the Imaging X-ray Polarimetry Explorer (IXPE) space telescope?"]}
+{"question_id": 22, "category": "hep", "turns": ["What other detectors are being developed as part of the future IceCube array?"]}
+{"question_id": 23, "category": "hep", "turns": ["What is particle intensity in cosmic ray physics?"]}
+{"question_id": 24, "category": "hep", "turns": ["What is covariant relative locality and how does it relate to quantum spacetime with Born geometry?"]}
+{"question_id": 25, "category": "hep", "turns": ["What is the effect of pressure and temperature on CO_2 permeability and CO_2/N_2 permselectivity in PAF-1-CH_2NH_2\u2014cPIM-1?"]}
+{"question_id": 26, "category": "hep", "turns": ["What is the removal efficiency of fluoride using the hybrid CAF-Zr membranes?"]}
+{"question_id": 27, "category": "hep", "turns": ["What milestone did machine learning reach in 2012?"]}
+{"question_id": 28, "category": "hep", "turns": ["How does the Penning trap confine atomic ions?"]}
+{"question_id": 29, "category": "hep", "turns": ["What are some of the discoveries that have challenged and inspired astronuclear physics?"]}
+{"question_id": 30, "category": "hep", "turns": ["What is the nature of the phenomenology associated with brane worlds?"]}
+{"question_id": 31, "category": "hep", "turns": ["How is the maximum energy achieved in stochastic acceleration mechanisms limited?"]}
+{"question_id": 32, "category": "hep", "turns": ["What is the geometrical alignment required in tomography?"]}
+{"question_id": 33, "category": "hep", "turns": ["How is the lateral distribution of muon density described?"]}
+{"question_id": 34, "category": "hep", "turns": ["What is heavy quarkonium and how is it formed?"]}
+{"question_id": 35, "category": "hep", "turns": ["What was concluded about fusion in tip collisions for heavier Ni+Sm reactions?"]}
+{"question_id": 36, "category": "hep", "turns": ["What is the mass dimension limitation for fields and interaction terms in the usual particle physics Lagrangian?"]}
+{"question_id": 37, "category": "hep", "turns": ["Can leptogenesis occur at low energy scales?"]}
+{"question_id": 38, "category": "hep", "turns": ["Is the applicability of the no-hair theorem to NS collapse disputed?"]}
+{"question_id": 39, "category": "hep", "turns": ["What are Free-Electron Lasers?"]}
+{"question_id": 40, "category": "hep", "turns": ["What is the simple countermeasure for cosmic ray exposure?"]}
+{"question_id": 41, "category": "hep", "turns": ["What is the effect of using high-energy beams in radiography?"]}
+{"question_id": 42, "category": "hep", "turns": ["What is the Dyson-Schwinger approach?"]}
+{"question_id": 43, "category": "hep", "turns": ["What are some challenges faced by file-based data management in high-energy physics experiments?"]}
+{"question_id": 44, "category": "hep", "turns": ["What is the importance of radiobiology research?"]}
+{"question_id": 45, "category": "hep", "turns": ["How is the extent of convective overshoot defined?"]}
+{"question_id": 46, "category": "hep", "turns": ["What is the requirement for measuring neutrino energy and flavor in oscillation experiments?"]}
+{"question_id": 47, "category": "hep", "turns": ["What is the significance of the first generation of Imaging Air Cherenkov Telescopes (IACT)?"]}
+{"question_id": 48, "category": "hep", "turns": ["What is the relationship between heavy meson production and prompt neutrino flux?"]}
+{"question_id": 49, "category": "hep", "turns": ["How do the amplitude and phase of the one-dimensional anisotropy vary with energy?"]}
+{"question_id": 50, "category": "hep", "turns": ["What are the two channels through which planets can form?"]}
+{"question_id": 51, "category": "hep", "turns": ["How might quark and pion condensates at finite isospin density relate to the concept of pion stars?"]}
+{"question_id": 52, "category": "hep", "turns": ["What is the significance of GWs and multi-messenger astronomy in probing primordial black holes?"]}
+{"question_id": 53, "category": "hep", "turns": ["What is the ISOL method?"]}
+{"question_id": 54, "category": "hep", "turns": ["What is DQM?"]}
+{"question_id": 55, "category": "hep", "turns": ["What is the purpose of using both anode and 8th dynode in reading out the 8-inch PMT?"]}
+{"question_id": 56, "category": "hep", "turns": ["How many elements does the current table of elements hold?"]}
+{"question_id": 57, "category": "hep", "turns": ["How is the type of a flat array with length n denoted?"]}
+{"question_id": 58, "category": "hep", "turns": ["What potential discovery can the identification of binary members and emission of the outflow reveal?"]}
+{"question_id": 59, "category": "hep", "turns": ["What is the main objective of the Large High Altitude Air Shower Observatory (LHAASO)?"]}
+{"question_id": 60, "category": "hep", "turns": ["What is the advantage of the new VELO compared to the current silicon strip VELO?"]}
+{"question_id": 61, "category": "hep", "turns": ["What is the threshold for muon detection in the MD?"]}
+{"question_id": 62, "category": "hep", "turns": ["What are the phenomenological consequences of extended scalar sectors?"]}
+{"question_id": 63, "category": "hep", "turns": ["What is one proposed explanation for the observed anisotropy in cosmic rays?"]}
+{"question_id": 64, "category": "hep", "turns": ["What is Random Forest and how does it work?"]}
+{"question_id": 65, "category": "hep", "turns": ["How do neutron stars play a role in testing theories of gravity?"]}
+{"question_id": 66, "category": "hep", "turns": ["What potential advantages may directional detectors offer in the future?"]}
+{"question_id": 67, "category": "hep", "turns": ["What information do we receive from white dwarfs?"]}
+{"question_id": 68, "category": "hep", "turns": ["What are the two main hurdles toward the mitigation of the radiation risk problem in interplanetary missions?"]}
+{"question_id": 69, "category": "hep", "turns": ["Why are detailed observations of ultra-high-energy cosmic ray (UHECR) showers important?"]}
+{"question_id": 70, "category": "hep", "turns": ["What does the X-ray binary Cygnus X-1 contain and what is its distance?"]}
+{"question_id": 71, "category": "hep", "turns": ["How are mechanical vibrations and interference minimized in the cryostat?"]}
+{"question_id": 72, "category": "hep", "turns": ["What is the forward multiparticle spectrometer (FMS) being proposed as a new sub-detector for CMS?"]}
+{"question_id": 73, "category": "hep", "turns": ["How can CE\u03bdNS be used for solar neutrino spectroscopy?"]}
+{"question_id": 74, "category": "hep", "turns": ["How is the effective magnetic field detected?"]}
+{"question_id": 75, "category": "hep", "turns": ["How does QCD (Quantum Chromodynamics) differ from QED (Quantum Electrodynamics)?"]}
+{"question_id": 76, "category": "hep", "turns": ["What software is used for generating simulation data in KM2A?"]}
+{"question_id": 77, "category": "hep", "turns": ["What are the order parameters for the idealized limits of QCD?"]}
+{"question_id": 78, "category": "hep", "turns": ["How have Cherenkov telescopes detected pulsed emissions from pulsars at very high energies (VHE)?"]}
+{"question_id": 79, "category": "hep", "turns": ["Can neutrinos solve remaining puzzles in particle physics?"]}
+{"question_id": 80, "category": "hep", "turns": ["Why is a more correct name for DM \u201cinvisible matter\u201d?"]}
+{"question_id": 81, "category": "hep", "turns": ["What components contribute to SHE alongside the Murakami-Fujita effect?"]}
+{"question_id": 82, "category": "hep", "turns": ["How does the ICR ratio change with pH?"]}
+{"question_id": 83, "category": "hep", "turns": ["What are the main components of a polarized H or D target?"]}
+{"question_id": 84, "category": "hep", "turns": ["How could lepton number be violated if neutrinos are Dirac particles?"]}
+{"question_id": 85, "category": "hep", "turns": ["What constraints need to be satisfied for primordial black holes to play the role of stars?"]}
+{"question_id": 86, "category": "hep", "turns": ["How is our four-dimensional world viewed in the context of String cosmology?"]}
+{"question_id": 87, "category": "hep", "turns": ["How is the logical structure of a list of unequal-length sublists of the Low-level data structrures represented using arrays?"]}
+{"question_id": 88, "category": "hep", "turns": ["What dominates the energy transport towards the surface in white dwarfs with T_{eff}\\ \\lesssim\\ 18,000K?"]}
+{"question_id": 89, "category": "hep", "turns": ["What is the requirement for planetary bodies to become quasispherical?"]}
+{"question_id": 90, "category": "hep", "turns": ["What is the reason for the crater-shaped features on the membrane surface of DP/PEG MMMs?"]}
+{"question_id": 91, "category": "hep", "turns": ["What is the alternative to SNRs as CR factories?"]}
+{"question_id": 92, "category": "hep", "turns": ["How is the preliminary cooling achieved in a dilution refrigerator?"]}
+{"question_id": 93, "category": "hep", "turns": ["What is the overall picture of the standard accretion disk model?"]}
+{"question_id": 94, "category": "hep", "turns": ["What are the components of LHAASO?"]}
+{"question_id": 95, "category": "hep", "turns": ["Why is the distance of most FRBs unknown?"]}
+{"question_id": 96, "category": "hep", "turns": ["What is the afterpulse signal time distribution?"]}
+{"question_id": 97, "category": "hep", "turns": ["What kind of detector is proposed for DUNE?"]}
+{"question_id": 98, "category": "hep", "turns": ["How is the luminosity of degenerate dark matter stars determined?"]}
+{"question_id": 99, "category": "hep", "turns": ["What potential benefit can fast timing electronics bring to liquid noble gas detectors?"]}
+{"question_id": 100, "category": "hep", "turns": ["What is IndexedArray in awkward-array?"]}
+{"question_id": 101, "category": "hep", "turns": ["How is the radiopurity of the acrylic panels ensured for the liquid scintillator vessel in JUNO?"]}
+{"question_id": 102, "category": "hep", "turns": ["How are ionization and dissociation ratios obtained under low-density conditions?"]}
+{"question_id": 103, "category": "hep", "turns": ["What is the sulfur enrichment factor of the PEG@ZIF-8/PVDF#6 membrane?"]}
+{"question_id": 104, "category": "hep", "turns": ["What are the two different approaches to solve the coupled problem posed by the Vlasov equation?"]}
+{"question_id": 105, "category": "hep", "turns": ["How is the spatial distribution of strange quarks different from the bulk geometry in heavy ion collisions?"]}
+{"question_id": 106, "category": "hep", "turns": ["What is the other source of heat in the Earth?"]}
+{"question_id": 107, "category": "hep", "turns": ["What are the orders of the fractional bandwidth, the rms angular divergence, and the source size of the radiation, and what is the product of the rms angular divergence and the source size?"]}
+{"question_id": 108, "category": "hep", "turns": ["What types of workflows can be excluded from caching?"]}
+{"question_id": 109, "category": "hep", "turns": ["Why is it urgent to study the trigger setting of scaler mode in LHAASO?"]}
+{"question_id": 110, "category": "hep", "turns": ["What determines the conductance in the nanochannels?"]}
+{"question_id": 111, "category": "hep", "turns": ["What is electron tomography and what are its limitations?"]}
+{"question_id": 112, "category": "hep", "turns": ["What is the purpose of the segmented mirror in each telescope of the fluorescence detector (FD) system?"]}
+{"question_id": 113, "category": "hep", "turns": ["How might advancements in the search for UHECR sources be achieved?"]}
+{"question_id": 114, "category": "hep", "turns": ["What systems should be studied to search for CP violation?"]}
+{"question_id": 115, "category": "hep", "turns": ["How has the background rejection power of the water Cherenkov technique been demonstrated?"]}
+{"question_id": 116, "category": "hep", "turns": ["What are the three diagnostic methods connected to cosmic-ray induced line spectra?"]}
+{"question_id": 117, "category": "hep", "turns": ["What is dark matter and why is it a problem in the cosmological standard model?"]}
+{"question_id": 118, "category": "hep", "turns": ["What is the role of the nuclear power industry in the development and production of radioactive sources?"]}
+{"question_id": 119, "category": "hep", "turns": ["Have recent developments resolved the issue of target space symmetry in the classical theory of integrable models?"]}
+{"question_id": 120, "category": "hep", "turns": ["What was the pressure transmitting medium used in the in situ high-pressure XRPD experiments?"]}
+{"question_id": 121, "category": "hep", "turns": ["What is Smoothed Particle Hydrodynamics (SPH)?"]}
+{"question_id": 122, "category": "hep", "turns": ["What is FHMR made of?"]}
+{"question_id": 123, "category": "hep", "turns": ["Which experiments have measured the cosmic-ray ankle with high precision?"]}
+{"question_id": 124, "category": "hep", "turns": ["What other avenues of research can shed light on the nature and interactions of dark matter?"]}
+{"question_id": 125, "category": "hep", "turns": ["How far away have isolated (giant) stars been observed in rare cases?"]}
+{"question_id": 126, "category": "hep", "turns": ["What is the prospect of the NA62 experiment in pushing the limits for the K^+ modes?"]}
+{"question_id": 127, "category": "hep", "turns": ["What is the significance of the equilibrium densities of membrane cells in the study?"]}
+{"question_id": 128, "category": "hep", "turns": ["What have recent searches for higher mass dimension corrections in LHC data revealed?"]}
+{"question_id": 129, "category": "hep", "turns": ["What is the method used to prepare Struvite-K?"]}
+{"question_id": 130, "category": "hep", "turns": ["What are considered as promising probes for the investigation of the EoS at collision energies above particle production thresholds?"]}
+{"question_id": 131, "category": "hep", "turns": ["How could the separation performance of COFs-polyamide hybrid membranes be tuned?"]}
+{"question_id": 132, "category": "hep", "turns": ["What is the purpose of WFCTA?"]}
+{"question_id": 133, "category": "hep", "turns": ["What is the Vlasov equation?"]}
+{"question_id": 134, "category": "hep", "turns": ["What is the alternative explanation for neutrino signatures?"]}
+{"question_id": 135, "category": "hep", "turns": ["What can HiSCORE measure in addition to gamma-quanta fluxes?"]}
+{"question_id": 136, "category": "hep", "turns": ["What is the expected differential sensitivity around 50 GeV with the upgraded configuration using 20\" PMTs in the other two pools of the WCDA?"]}
+{"question_id": 137, "category": "hep", "turns": ["What will be possible with the new facilities for space radiation protection?"]}
+{"question_id": 138, "category": "hep", "turns": ["What is the potential source of polarized emission in the x-ray binary MAXI J1820+070?"]}
+{"question_id": 139, "category": "hep", "turns": ["What is superradiance, and what are its characteristics?"]}
+{"question_id": 140, "category": "hep", "turns": ["What is Bremsstrahlung?"]}
+{"question_id": 141, "category": "hep", "turns": ["How are isotopic 'spin' degrees of freedom related to flag manifolds?"]}
+{"question_id": 142, "category": "hep", "turns": ["How are active neutrinos different from charged leptons?"]}
+{"question_id": 143, "category": "hep", "turns": ["What is the dominant background radiation in the universe?"]}
+{"question_id": 144, "category": "hep", "turns": ["What are the theory tools that are vital ingredients in contemporary studies of quarkonium in medium?"]}
+{"question_id": 145, "category": "hep", "turns": ["What is the role of the neutrino asymmetry coefficient B in the scalar and tensor currents involving right-handed neutrinos fit?"]}
+{"question_id": 146, "category": "hep", "turns": ["What is the test particle approach?"]}
+{"question_id": 147, "category": "hep", "turns": ["What is finite isospin chemical potential?"]}
+{"question_id": 148, "category": "hep", "turns": ["How long does it take to install or replace the fibers for testing?"]}
+{"question_id": 149, "category": "hep", "turns": ["What is the purpose of the electromagnetic detector (ED) array in the LHAASO?"]}
+{"question_id": 150, "category": "hep", "turns": ["What is the LHCb scenario?"]}
+{"question_id": 151, "category": "hep", "turns": ["What does the investigation by CALIPSO and MODIS data focus on?"]}
+{"question_id": 152, "category": "hep", "turns": ["What do PET isotopes emit and what happens when they meet electrons?"]}
+{"question_id": 153, "category": "hep", "turns": ["What is the pyrolitic composition of the lower mantle?"]}
+{"question_id": 154, "category": "hep", "turns": ["What observation mode will WFCTA be operated in during the last stage of observation?"]}
+{"question_id": 155, "category": "hep", "turns": ["What is the significance of using bromine in the expanding layer of the target?"]}
+{"question_id": 156, "category": "hep", "turns": ["What are the remarkable characteristics of cryogenic calorimeters?"]}
+{"question_id": 157, "category": "hep", "turns": ["What role do neutrinos play in extreme environments?"]}
+{"question_id": 158, "category": "hep", "turns": ["What is the focus of the recent effort regarding primordial black holes?"]}
+{"question_id": 159, "category": "hep", "turns": ["What function is typically used to describe the lateral distribution of secondary particles in an electromagnetic shower?"]}
+{"question_id": 160, "category": "hep", "turns": ["How is the image of the fluorescence light pixelized in the fluorescence detector (FD) system?"]}
+{"question_id": 161, "category": "hep", "turns": ["What is the range of the crystallization exothermic peak and the crystallization melting endothermic peak of PEG membrane?"]}
+{"question_id": 162, "category": "hep", "turns": ["What needs to be determined in further studies regarding the CB?"]}
+{"question_id": 163, "category": "hep", "turns": ["What is the purpose of the heat blanketing envelope near the surface of a neutron star?"]}
+{"question_id": 164, "category": "hep", "turns": ["What can provide access to the right-handed current operator O\u03c6ud and thus to the low-energy coefficient \u03b5R?"]}
+{"question_id": 165, "category": "hep", "turns": ["How are the parton distribution functions (PDFs) determined?"]}
+{"question_id": 166, "category": "hep", "turns": ["What is the input and output of the LSTM model?"]}
+{"question_id": 167, "category": "hep", "turns": ["What is the working principle of a dilution refrigerator (DR)?"]}
+{"question_id": 168, "category": "hep", "turns": ["What is the fundamental idea behind causal fermion systems?"]}
+{"question_id": 169, "category": "hep", "turns": ["What is the role of rare kaon decays in particle physics?"]}
+{"question_id": 170, "category": "hep", "turns": ["How can users access GPUs at standard Grid sites for loosely coupled workloads?"]}
+{"question_id": 171, "category": "hep", "turns": ["What are ultra-high-energy cosmic rays (UHECRs)?"]}
+{"question_id": 172, "category": "hep", "turns": ["What is the goal of the \"interpolation approach\" to the neutron-star matter EoS?"]}
+{"question_id": 173, "category": "hep", "turns": ["What are the conclusions of the Radial X-Ray Diffraction Study of Superhard Early Transition Metal Dodecaborides under High Pressure regarding the properties of {Zr}_{0..5}Y_{0.5}B_{12} , ZrB_{12} and YB_{12} and their relation to hardness?"]}
+{"question_id": 174, "category": "hep", "turns": ["What is the NASA Space Radiation Laboratory (NSRL) beamline at the Brookhaven National Laboratory (BNL) in the USA?"]}
+{"question_id": 175, "category": "hep", "turns": ["Is it currently clear if SNRs in general are capable of accelerating particles up to the knee?"]}
+{"question_id": 176, "category": "hep", "turns": ["What is the most common carrier used in CO_2 fixed carrier membrane?"]}
+{"question_id": 177, "category": "hep", "turns": ["What are the elementary particles in the Standard Model?"]}
+{"question_id": 178, "category": "hep", "turns": ["What are the main goals of the SBN program?"]}
+{"question_id": 179, "category": "hep", "turns": ["Why is an expansion around the limit of no interactions used in studying QCD?"]}
+{"question_id": 180, "category": "hep", "turns": ["Why do neutrino detectors need to be hosted deep underground?"]}
+{"question_id": 181, "category": "hep", "turns": ["How do 3D radiation-hydrodynamics (RHD) simulations contribute to our understanding of convection in white dwarfs?"]}
+{"question_id": 182, "category": "hep", "turns": ["What is the average radiative cooling power of the scalable flexible hybrid membranes with photonic structures for daytime radiative cooling?"]}
+{"question_id": 183, "category": "hep", "turns": ["What is the effect of cross-linking of PEG on PV performance in MMMs?"]}
+{"question_id": 184, "category": "hep", "turns": ["What are the possible origins of the primary particles responsible for the very high energy \u03b3-ray emission?"]}
+{"question_id": 185, "category": "hep", "turns": ["What does the Dirac equation assume about the invariance of the theory?"]}
+{"question_id": 186, "category": "hep", "turns": ["What is the COFs-polyamide hybrid membrane?"]}
+{"question_id": 187, "category": "hep", "turns": ["How does the concentration of zeolitic constituents affect the elastic properties of tobermorite supergroup minerals?"]}
+{"question_id": 188, "category": "hep", "turns": ["What did the AnDY experiment at RHIC observe in Cu+Au collisions?"]}
+{"question_id": 189, "category": "hep", "turns": ["What is the flux of cosmic ray electrons (CREs) compared to the flux of hadronic particles at 1 TeV and 10 TeV?"]}
+{"question_id": 190, "category": "hep", "turns": ["Are there possibilities for the existence of neutrino states beyond the standard three flavors?"]}
+{"question_id": 191, "category": "hep", "turns": ["How can the size of transport coefficients help classify a given gravitational wave event as having its origin in a neutron star merger?"]}
+{"question_id": 192, "category": "hep", "turns": ["What are the energy gaps for the creation of secondary particles or photons in different types of detectors?"]}
+{"question_id": 193, "category": "hep", "turns": ["What is HTCondor and how is it used in the implementation?"]}
+{"question_id": 194, "category": "hep", "turns": ["What is the potential benefit of measuring geoneutrino source directions?"]}
+{"question_id": 195, "category": "hep", "turns": ["What has the insight from multimessenger observations triggered?"]}
+{"question_id": 196, "category": "hep", "turns": ["What is the problem of gauge dependence in relation to the Higgs vacuum expectation value?"]}
+{"question_id": 197, "category": "hep", "turns": ["What does the recent ATLAS data on the associated production of prompt photons and charm-quark jets in pp collisions at \\sqrt s= 8 TeV provide?"]}
+{"question_id": 198, "category": "hep", "turns": ["What is the purpose of using many kinds of parameters for primary nuclei identification?"]}
+{"question_id": 199, "category": "hep", "turns": ["What modifications must be introduced in the chemical equilibrium calculations for cool He-atmosphere white dwarfs?"]}
+{"question_id": 200, "category": "hep", "turns": ["What is the effect of temperature on the desulfurization performance of the PEG@ZIF-8/PVDF#6 membrane?"]}
+{"question_id": 201, "category": "hep", "turns": ["What is the estimated gamma-ray flux of Cen A based on EGRET observations?"]}
+{"question_id": 202, "category": "hep", "turns": ["What does the lower cosmic-ray energy density in the central molecular zone suggest?"]}
+{"question_id": 203, "category": "hep", "turns": ["How have X-ray diffraction techniques developed over time?"]}
+{"question_id": 204, "category": "hep", "turns": ["Where is the active experimental program investigating the EMC effect taking place?"]}
+{"question_id": 205, "category": "hep", "turns": ["What is the mass resolution of K^{0}_{S}mesons in the current tracking system of LHCb?"]}
+{"question_id": 206, "category": "hep", "turns": ["What is the significance of the research outcomes from AMVA4NewPhysics?"]}
+{"question_id": 207, "category": "hep", "turns": ["What is the Glashow resonance and how is it related to the detection of astrophysical neutrinos?"]}
+{"question_id": 208, "category": "hep", "turns": ["What are the different approaches to calculating the Reynolds number and what are their results?"]}
+{"question_id": 209, "category": "hep", "turns": ["What are the effective models of quantum gravity and how are they linked to the fundamental theories?"]}
+{"question_id": 210, "category": "hep", "turns": ["What is the benefit of selecting or modifying a polymer with oxygen-containing groups in CO_2-FTMs?"]}
+{"question_id": 211, "category": "hep", "turns": ["How do black holes merge and what happens during the merger?"]}
+{"question_id": 212, "category": "hep", "turns": ["What is the target areal density of the current free ABS in the H-jet system?"]}
+{"question_id": 213, "category": "hep", "turns": ["What is the LSTM method and how does it solve the problems of gradient vanishing and exploding in RNN?"]}
+{"question_id": 214, "category": "hep", "turns": ["What is the in-medium static inter quark potential?"]}
+{"question_id": 215, "category": "hep", "turns": ["What is HIT in Germany currently testing in specific clinical trials?"]}
+{"question_id": 216, "category": "hep", "turns": ["What has the Pierre Auger Collaboration searched for in coincidence with gravitational wave events detected by LIGO/Virgo?"]}
+{"question_id": 217, "category": "hep", "turns": ["What is the Large High Altitude Air Shower Observatory (LHAASO)?"]}
+{"question_id": 218, "category": "hep", "turns": ["Is HS(DD2) a thermodynamically consistent model for both nonuniform matter of light and heavy clusters within the gas of unbound nucleons at low density?"]}
+{"question_id": 219, "category": "hep", "turns": ["What is the level of consistency between the MC trigger rate and the experimental data?"]}
+{"question_id": 220, "category": "hep", "turns": ["How does the Dolgov model differ from the Hawking and Weinberg models?"]}
+{"question_id": 221, "category": "hep", "turns": ["What is the T2K neutrino beam and how is it generated?"]}
+{"question_id": 222, "category": "hep", "turns": ["What are extensive air showers (EAS) events?"]}
+{"question_id": 223, "category": "hep", "turns": ["How are electron neutrinos produced?"]}
+{"question_id": 224, "category": "hep", "turns": ["What is the significance of the Higgs vacuum in the Standard Model?"]}
+{"question_id": 225, "category": "hep", "turns": ["How can ptychography be carried out on the beam that is Bragg diffracted from a crystalline domain?"]}
+{"question_id": 226, "category": "hep", "turns": ["What is the main criticism of PBH baryogenesis models by Lindley?"]}
+{"question_id": 227, "category": "hep", "turns": ["What is the active FTS phase?"]}
+{"question_id": 228, "category": "hep", "turns": ["When can more conclusive results be expected regarding the existence of active-sterile oscillations?"]}
+{"question_id": 229, "category": "hep", "turns": ["How did synchrotron radiation contribute to muscle research?"]}
+{"question_id": 230, "category": "hep", "turns": ["What is the role of neutrino cooling in the early stages of white dwarf cooling?"]}
+{"question_id": 231, "category": "hep", "turns": ["Who initially proposed the existence of fundamental natural units for length, mass, time, and energy?"]}
+{"question_id": 232, "category": "hep", "turns": ["Who recognized the importance of pre-bunching at the periodicity of the wavelength of interest to make the radiation coherent?"]}
+{"question_id": 233, "category": "hep", "turns": ["What is the significance of the detection of GRB 190114C in the TeV band?"]}
+{"question_id": 234, "category": "hep", "turns": ["When was quasifission first identified and named?"]}
+{"question_id": 235, "category": "hep", "turns": ["What are the candidate processes potentially responsible for accelerating the emitting electrons and positrons?"]}
+{"question_id": 236, "category": "hep", "turns": ["What makes cryogenic low-temperature detectors (CLTDs) attractive for the detection of heavy ions?"]}
+{"question_id": 237, "category": "hep", "turns": ["Are there expected to be tighter bounds in models where dark matter couples to both electrons and protons?"]}
+{"question_id": 238, "category": "hep", "turns": ["What are the challenges in identifying neutrino point sources?"]}
+{"question_id": 239, "category": "hep", "turns": ["Why is cooperation of different nations becoming mandatory for the construction and running of these new facilities?"]}
+{"question_id": 240, "category": "hep", "turns": ["What is the thickness of the 3D-Hybridized MAPS and readout ASIC pixel detector and how does it affect its efficiency and radiation hardness?"]}
+{"question_id": 241, "category": "hep", "turns": ["What fields have ion beam facilities impacted besides nuclear physics research?"]}
+{"question_id": 242, "category": "hep", "turns": ["What is VE-cadherin and how was it used to evaluate the repair of endothelial cell-cell connections?"]}
+{"question_id": 243, "category": "hep", "turns": ["What is the advantage of using [${\\rm Si}_3N_4$] in the nanowire membrane?"]}
+{"question_id": 244, "category": "hep", "turns": ["When was the dynamic calibration system installed and what is the status of related testing?"]}
+{"question_id": 245, "category": "hep", "turns": ["What role does the study of VHE emission from GRBs play in understanding their physics?"]}
+{"question_id": 246, "category": "hep", "turns": ["What are the geometric descriptions associated with some phases of CDT in 3+1 dimensions?"]}
+{"question_id": 247, "category": "hep", "turns": ["What is the nature of the higher-dimensional operators in the effective theory of the Standard Model?"]}
+{"question_id": 248, "category": "hep", "turns": ["What is lensless x-ray nanoimaging?"]}
+{"question_id": 249, "category": "hep", "turns": ["What are the dominant systematic uncertainties for the lattice simulations?"]}
+{"question_id": 250, "category": "hep", "turns": ["How has the detector performance of LHAASO been evaluated?"]}
+{"question_id": 251, "category": "hep", "turns": ["What is the purpose of the LHCb detector?"]}
+{"question_id": 252, "category": "hep", "turns": ["What is the purpose of pursuing detector technology R&D?"]}
+{"question_id": 253, "category": "hep", "turns": ["What determines the density and impact of trapped electrons in absorber materials?"]}
+{"question_id": 254, "category": "hep", "turns": ["How do the BUU-type codes preserve the initial momentum distribution?"]}
+{"question_id": 255, "category": "hep", "turns": ["What is the purpose of establishing a terminology and framework for the description of the codes?"]}
+{"question_id": 256, "category": "hep", "turns": ["What is the concept of a corresponding mass (or energy) scale for quantum gravity?"]}
+{"question_id": 257, "category": "hep", "turns": ["What is the basic principle of meta-heuristics based on EA?"]}
+{"question_id": 258, "category": "hep", "turns": ["What are some motivations for studying theories of gravity beyond General Relativity?"]}
+{"question_id": 259, "category": "hep", "turns": ["What is the purpose of the Large High Altitude Air Shower Observatory (LHAASO)?"]}
+{"question_id": 260, "category": "hep", "turns": ["What is the electric screening mass?"]}
+{"question_id": 261, "category": "hep", "turns": ["What is the more natural approach to address this violation of general covariance in the EFT framework?"]}
+{"question_id": 262, "category": "hep", "turns": ["What are the observables that provide important information on the location of the CEP?"]}
+{"question_id": 263, "category": "hep", "turns": ["How is our universe viewed in the framework involving branes?"]}
+{"question_id": 264, "category": "hep", "turns": ["What is the evidence for the existence of dark matter?"]}
+{"question_id": 265, "category": "hep", "turns": ["What are the results of integrating the LSTM model with Home Energy Management Systems (HEMS)?"]}
+{"question_id": 266, "category": "hep", "turns": ["What are the two directions in which the development of the quantum theory of integrable models went?"]}
+{"question_id": 267, "category": "hep", "turns": ["How are Single Transverse-Spin Asymmetries (STSAs) treated in current approaches?"]}
+{"question_id": 268, "category": "hep", "turns": ["What is the purpose of a jagged integer array?"]}
+{"question_id": 269, "category": "hep", "turns": ["What are the development languages used in the BESIII DQM system?"]}
+{"question_id": 270, "category": "hep", "turns": ["In a two-body system involving a charge particle and a spin particle, what is the significance of the charge particle's relative motion to the spin particle?"]}
+{"question_id": 271, "category": "hep", "turns": ["How is it possible to reproduce the GCR spectrum in different mission scenarios?"]}
+{"question_id": 272, "category": "hep", "turns": ["What happens when an excited electron absorbs an incoming photon?"]}
+{"question_id": 273, "category": "hep", "turns": ["Which detector is currently the most sensitive instrument in the Northern Hemisphere?"]}
+{"question_id": 274, "category": "hep", "turns": ["Is it confirmed that the higher readout rate in fixed-target mode is sustainable?"]}
+{"question_id": 275, "category": "hep", "turns": ["How are the concepts of nuclearites and strange stars related to each other and to other ideas?"]}
+{"question_id": 276, "category": "hep", "turns": ["What is the advantage of using wavelet transforms (WT) in EXAFS analysis?"]}
+{"question_id": 277, "category": "hep", "turns": ["What is the total north-south displacement direction of the array based on the analysis?"]}
+{"question_id": 278, "category": "hep", "turns": ["How does the composition law for momenta differ in the context of DSR compared to standard special relativity?"]}
+{"question_id": 279, "category": "hep", "turns": ["What are the conditions proposed by Sakharov to explain the baryon asymmetry, and how do they relate to the higher-dimensional operators?"]}
+{"question_id": 280, "category": "hep", "turns": ["Why is multi-messenger astronomy significant?"]}
+{"question_id": 281, "category": "hep", "turns": ["How can neutrinos indirectly probe dark matter?"]}
+{"question_id": 282, "category": "hep", "turns": ["What is the correlation between the trends in hardness and the trends in the plateau values of the differential stress?"]}
+{"question_id": 283, "category": "hep", "turns": ["What is the reason for the breakthrough of enrichment factorc?"]}
+{"question_id": 284, "category": "hep", "turns": ["Why is the measurement of individual cosmic ray spectra, particularly near the \"knee\" region, important?"]}
+{"question_id": 285, "category": "hep", "turns": ["Can you give an example of Hierarchical Fine-Tuning?"]}
+{"question_id": 286, "category": "hep", "turns": ["Are terrestrial and cosmological tests important in the study of QG?"]}
+{"question_id": 287, "category": "hep", "turns": ["Why is the combination of results from different experiments important in neutrino physics?"]}
+{"question_id": 288, "category": "hep", "turns": ["What type of detectors are widely employed in third-generation synchrotron radiation facilities instead of PSPCs?"]}
+{"question_id": 289, "category": "hep", "turns": ["How does WCDA distinguish gamma rays from cosmic rays?"]}
+{"question_id": 290, "category": "hep", "turns": ["What are the two types of electromagnetic fields used in accelerators?"]}
+{"question_id": 291, "category": "hep", "turns": ["How does the AOD change at the LHAASO site over the months?"]}
+{"question_id": 292, "category": "hep", "turns": ["What are the four research pillars of science at FAIR?"]}
+{"question_id": 293, "category": "hep", "turns": ["What is the concept of first-order Fermi acceleration?"]}
+{"question_id": 294, "category": "hep", "turns": ["What is the main goal of the future electron-ion collider (EIC) at BNL?"]}
+{"question_id": 295, "category": "hep", "turns": ["What is the cooperation length and how does it relate to the coherence properties of the radiation?"]}
+{"question_id": 296, "category": "hep", "turns": ["What is known about the composition of ultra-high-energy cosmic rays (UHECRs)?"]}
+{"question_id": 297, "category": "hep", "turns": ["What is AMS-01?"]}
+{"question_id": 298, "category": "hep", "turns": ["How do QMD models introduce many-body correlations in the dynamics?"]}
+{"question_id": 299, "category": "hep", "turns": ["What is crucial for achieving the goal of astronuclear physics research?"]}
+{"question_id": 300, "category": "hep", "turns": ["Why is it necessary to extend Einstein's general relativity (GR) if gravity is quantized?"]}
+{"question_id": 301, "category": "hep", "turns": ["What is pervaporation desulfurization and how is it different from hydrodesulfurization?"]}
+{"question_id": 302, "category": "hep", "turns": ["What is split SUSY?"]}
+{"question_id": 303, "category": "hep", "turns": ["What are some of the properties of neutrinos that researchers are interested in studying?"]}
+{"question_id": 304, "category": "hep", "turns": ["What does the High Energy Physics (HEP) community need to do in order to meet the challenge posed by the High Luminosity LHC?"]}
+{"question_id": 305, "category": "hep", "turns": ["What is the expected dominance of SNRs and stellar clusters in the spectrum of Galactic Cosmic Rays?"]}
+{"question_id": 306, "category": "hep", "turns": ["How is WCDA designed to measure gamma-ray sources?"]}
+{"question_id": 307, "category": "hep", "turns": ["What is the simulation criterion used for the g rays in WCDA?"]}
+{"question_id": 308, "category": "hep", "turns": ["What is the high baryon density regime?"]}
+{"question_id": 309, "category": "hep", "turns": ["What are the challenges associated with x-ray nanoimaging and how are they addressed?"]}
+{"question_id": 310, "category": "hep", "turns": ["How are trapped ion spin simulators able to generate many-body spin interactions?"]}
+{"question_id": 311, "category": "hep", "turns": ["What does the higher adsorption capacity for thiophene indicate?"]}
+{"question_id": 312, "category": "hep", "turns": ["What is the significance of the detection of deposits of live $^{60}$Fe in deep-sea sediments?"]}
+{"question_id": 313, "category": "hep", "turns": ["What role does the Wide Field of view Cherenkov Telescope Array (WFCTA) play in the LHAASO project?"]}
+{"question_id": 314, "category": "hep", "turns": ["What is the main task of the DCS?"]}
+{"question_id": 315, "category": "hep", "turns": ["How can the chemical potentials for baryon number, strangeness, and charge be related to the chemical potentials of the up, down, and strange quarks?"]}
+{"question_id": 316, "category": "hep", "turns": ["What type of radiation do Free-Electron Lasers produce?"]}
+{"question_id": 317, "category": "hep", "turns": ["When was the concept of first-order Fermi acceleration developed?"]}
+{"question_id": 318, "category": "hep", "turns": ["What is the general picture of accretion-powered emission and what supports it?"]}
+{"question_id": 319, "category": "hep", "turns": ["What is the NP probe left in the flavor-universal limit?"]}
+{"question_id": 320, "category": "hep", "turns": ["What is Monte Carlo simulation used for in the analysis of JUNO detector?"]}
+{"question_id": 321, "category": "hep", "turns": ["What is one of the possible original measurements mentioned?"]}
+{"question_id": 322, "category": "hep", "turns": ["What is the origin of masses and mixing of quarks in the Standard Model?"]}
+{"question_id": 323, "category": "hep", "turns": ["What is the most interesting regime of intermediate baryon density?"]}
+{"question_id": 324, "category": "hep", "turns": ["Are there other properties of neutrinos that might differ from the standard three-neutrino paradigm?"]}
+{"question_id": 325, "category": "hep", "turns": ["When and where was the most recent workshop, LTD19, held?"]}
+{"question_id": 326, "category": "hep", "turns": ["How was the operation of the sealed structure tested?"]}
+{"question_id": 327, "category": "hep", "turns": ["Why can't the WIMP scattering cross sections for direct detection be too large?"]}
+{"question_id": 328, "category": "hep", "turns": ["Why is the integration of condensed matter and high-energy physics important?"]}
+{"question_id": 329, "category": "hep", "turns": ["What is the minimum mass required for a planet to become habitable?"]}
+{"question_id": 330, "category": "hep", "turns": ["How are muons produced in air showers?"]}
+{"question_id": 331, "category": "hep", "turns": ["What did the MiniBooNE experiment report?"]}
+{"question_id": 332, "category": "hep", "turns": ["What was the application demonstrated using self-seeding in the soft X-ray region?"]}
+{"question_id": 333, "category": "hep", "turns": ["What evidence supports the association between FRB 121102 and its radio counterpart?"]}
+{"question_id": 334, "category": "hep", "turns": ["What are the factors that favor small absorber sizes for cryogenic low-temperature detectors (CLTDs) in the detection of heavy ions?"]}
+{"question_id": 335, "category": "hep", "turns": ["Who led the team that made the first experimental detection of neutrinos?"]}
+{"question_id": 336, "category": "hep", "turns": ["What was observed when depositing aluminum films on very thin sapphire samples?"]}
+{"question_id": 337, "category": "hep", "turns": ["How does the antenna mechanism work?"]}
+{"question_id": 338, "category": "hep", "turns": ["What frequencies are correlated with the noise power spectra in the study of detectors' performance?"]}
+{"question_id": 339, "category": "hep", "turns": ["What impact does bottom convective overshoot have on warm H-rich white dwarfs?"]}
+{"question_id": 340, "category": "hep", "turns": ["What is the relationship between the effective coupling of WIMPs to the SM sector and the WIMP's mass according to dimensional grounds?"]}
+{"question_id": 341, "category": "hep", "turns": ["What is the maximum ICR ratio for KCl, [${\\rm CaCl}_2$], and [$K_2{\\rm SO}_4$]?"]}
+{"question_id": 342, "category": "hep", "turns": ["When did the TMEP start and in which energy regime were the initial studies conducted?"]}
+{"question_id": 343, "category": "hep", "turns": ["Why is the description of experiments in the Higgs sector using the Higgs and the W/Z bosons as if they would be physical, observable particles working well?"]}
+{"question_id": 344, "category": "hep", "turns": ["What kind of data is collected by LHAASO-WCDA in the triggerless mode?"]}
+{"question_id": 345, "category": "hep", "turns": ["In the context of thermal transport, what is the question that arises regarding the development of linear response theory?"]}
+{"question_id": 346, "category": "hep", "turns": ["What are several phase-III clinical trials currently ongoing?"]}
+{"question_id": 347, "category": "hep", "turns": ["Why are forthcoming ATLAS and CMS measurements of Z+HF production at \\sqrt S = 13 TeV important?"]}
+{"question_id": 348, "category": "hep", "turns": ["What is the compatibility of the current best-fit parameters of short-baseline experiments with the constraint on N_{eff}?"]}
+{"question_id": 349, "category": "hep", "turns": ["Why can't the Gallium neutrino anomaly be considered as a sufficient indication of electron neutrino disappearance?"]}
+{"question_id": 350, "category": "hep", "turns": ["What is the Fourier limit?"]}
+{"question_id": 351, "category": "hep", "turns": ["What methods are used to simplify the problem of computing the dynamics of a heavy-ion collision?"]}
+{"question_id": 352, "category": "hep", "turns": ["What is the possible reason why events similar to FRB 200428 have not been seen previously?"]}
+{"question_id": 353, "category": "hep", "turns": ["How have modifications to the conventional diffusion model been proposed to address its inconsistencies?"]}
+{"question_id": 354, "category": "hep", "turns": ["What is the function of the fiber fleece radiator in the TRD?"]}
+{"question_id": 355, "category": "hep", "turns": ["How are heavy Majorana neutrinos involved in leptogenesis?"]}
+{"question_id": 356, "category": "hep", "turns": ["Why is using the Higgs vacuum expectation value as the only indicator of the presence of BEH physics insufficient?"]}
+{"question_id": 357, "category": "hep", "turns": ["How is the ES model developed?"]}
+{"question_id": 358, "category": "hep", "turns": ["Why is the absolute temperature coefficient of PMTs important?"]}
+{"question_id": 359, "category": "hep", "turns": ["What are the physics goals of the SBN program?"]}
+{"question_id": 360, "category": "hep", "turns": ["Which experiments have been searching for neutrinos from cosmic sources and neutrinos produced in the propagation of cosmic rays through the Universe?"]}
+{"question_id": 361, "category": "hep", "turns": ["What are the future prospects for geoneutrino measurements?"]}
+{"question_id": 362, "category": "hep", "turns": ["What are some possible formation mechanisms for dark matter stars?"]}
+{"question_id": 363, "category": "hep", "turns": ["What is the effect of hydrostatic pressure on the value of \u03b3 for struvite-K?"]}
+{"question_id": 364, "category": "hep", "turns": ["What is the significance of multi-messenger astronomy?"]}
+{"question_id": 365, "category": "hep", "turns": ["Why can't charged cosmic rays be used for QG studies?"]}
+{"question_id": 366, "category": "hep", "turns": ["What is DP-POSS?"]}
+{"question_id": 367, "category": "hep", "turns": ["What are some of the new phenomena that can be observed at XUV and X-ray wavelengths?"]}
+{"question_id": 368, "category": "hep", "turns": ["What is the trend observed in the rigidity resolved boron over carbon ratio?"]}
+{"question_id": 369, "category": "hep", "turns": ["Why is the photoelectron count in the brightest cell (Nmax) measured by WCDA sensitive to the components of the extensive air shower?"]}
+{"question_id": 370, "category": "hep", "turns": ["How many stations are there in the muon system of LHCb?"]}
+{"question_id": 371, "category": "hep", "turns": ["What is the recent evidence for CP violation in the neutrino sector?"]}
+{"question_id": 372, "category": "hep", "turns": ["How does the Large High Altitude Air Shower Observatory (LHAASO) address the challenge of measuring cosmic-ray electron spectrum?"]}
+{"question_id": 373, "category": "hep", "turns": ["What is the spontaneous breaking of gauge invariance?"]}
+{"question_id": 374, "category": "hep", "turns": ["What is the Fanaro-Riley morphological dichotomy of AGN jets?"]}
+{"question_id": 375, "category": "hep", "turns": ["What are the consequences of determining the neutrino nature?"]}
+{"question_id": 376, "category": "hep", "turns": ["How is particle intensity related to the number density of cosmic rays?"]}
+{"question_id": 377, "category": "hep", "turns": ["How are the final abundances of quarkonium states measured?"]}
+{"question_id": 378, "category": "hep", "turns": ["How is the temperature of the LEDs controlled?"]}
+{"question_id": 379, "category": "hep", "turns": ["What does the Data processing layer of DAQ software functionality include?"]}
+{"question_id": 380, "category": "hep", "turns": ["How is vacuum metastability related to the effective potential and radiative corrections?"]}
+{"question_id": 381, "category": "hep", "turns": ["What are the complexities associated with convection in stars?"]}
+{"question_id": 382, "category": "hep", "turns": ["What is the effective field theory (EFT) framework?"]}
+{"question_id": 383, "category": "hep", "turns": ["How many additional strings will be installed as part of the IceCube-Upgrade?"]}
+{"question_id": 384, "category": "hep", "turns": ["What kind of observations provide evidence for the existence of dark matter?"]}
+{"question_id": 385, "category": "hep", "turns": ["What are some fillers that have been employed to enhance the property of PDMS membrane?"]}
+{"question_id": 386, "category": "hep", "turns": ["What is ROOT TTree?"]}
+{"question_id": 387, "category": "hep", "turns": ["What is the Superconducting Fragment Separator (Super-FRS) used for?"]}
+{"question_id": 388, "category": "hep", "turns": ["What are the advantages of using an existing LHC detector?"]}
+{"question_id": 389, "category": "hep", "turns": ["What are gamma-ray bursts and how might they relate to UHECRs?"]}
+{"question_id": 390, "category": "hep", "turns": ["How many parameters are needed to describe three-flavor neutrino mixing?"]}
+{"question_id": 391, "category": "hep", "turns": ["What components make up the Telescope Array (TA)?"]}
+{"question_id": 392, "category": "hep", "turns": ["What is the \"scotogenic\" neutrino mass model?"]}
+{"question_id": 393, "category": "hep", "turns": ["What is LHAASO?"]}
+{"question_id": 394, "category": "hep", "turns": ["What are some of the research programs associated with BIOMAT?"]}
+{"question_id": 395, "category": "hep", "turns": ["How can heavy-ion collisions provide information on the equation of state (EoS) away from saturation?"]}
+{"question_id": 396, "category": "hep", "turns": ["What are the contamination percentages for pure proton and mixed proton and helium samples after cutting?"]}
+{"question_id": 397, "category": "hep", "turns": ["What contributions have theorists made in understanding solar neutrinos and neutrino oscillations?"]}
+{"question_id": 398, "category": "hep", "turns": ["What is the drawback of using a wire or foil target in terms of luminosity measurement?"]}
+{"question_id": 399, "category": "hep", "turns": ["What are the two independent parameters that can be used to constrain the position and bulk velocity of the corona in MAXI J1820 + 070?"]}
+{"question_id": 400, "category": "hep", "turns": ["What is the central issue with the Brout-Englert-Higgs (BEH) physics?"]}
+{"question_id": 401, "category": "hep", "turns": ["What are the advantages of membrane separation for CO_2 separation and capture technology?"]}
+{"question_id": 402, "category": "hep", "turns": ["What are the conventional designations for the two sides of the perforated electrode in a THGEM detector?"]}
+{"question_id": 403, "category": "hep", "turns": ["What are the parameters compared between the E1039 target and the COMPASS target?"]}
+{"question_id": 404, "category": "hep", "turns": ["How do neutrinos impact core-collapse supernovae?"]}
+{"question_id": 405, "category": "hep", "turns": ["What are some of the notable findings from TeV gamma-ray surveys using Milagro and HAWC?"]}
+{"question_id": 406, "category": "hep", "turns": ["How do these LIV backgrounds affect the propagation of particles?"]}
+{"question_id": 407, "category": "hep", "turns": ["What are the ground states of QED, QCD, and weak interactions?"]}
+{"question_id": 408, "category": "hep", "turns": ["What is the black hole mass of Cygnus X-1 and what is the discrepancy in the derived system parameters?"]}
+{"question_id": 409, "category": "hep", "turns": ["Which observatories have made combined efforts in the observation of these anisotropies?"]}
+{"question_id": 410, "category": "hep", "turns": ["What role does diffusion play in the spectral evolution of white dwarfs?"]}
+{"question_id": 411, "category": "hep", "turns": ["What are user containers in the context of running ML jobs on the Grid?"]}
+{"question_id": 412, "category": "hep", "turns": ["What is the background rate in the region of interest (ROI) for CUORE?"]}
+{"question_id": 413, "category": "hep", "turns": ["What further developments are needed for SiPM modules in liquid noble-gas detectors?"]}
+{"question_id": 414, "category": "hep", "turns": ["What are the advantages of collinear factorization in extrapolating small-x for applications in astroparticle physics?"]}
+{"question_id": 415, "category": "hep", "turns": ["What is the Virtual Geometry Model (VGM)?"]}
+{"question_id": 416, "category": "hep", "turns": ["What did the observations of the Imaging Atmospheric Cherenkov Telescopes reveal about cosmic rays in the vicinity of the Galactic center?"]}
+{"question_id": 417, "category": "hep", "turns": ["How is the configuration of SSP changed in response to light?"]}
+{"question_id": 418, "category": "hep", "turns": ["Why is it important to have domain specific knowledge in HEP learning applications?"]}
+{"question_id": 419, "category": "hep", "turns": ["Over what energy range will the spectra of gamma ray sources be measured by LHAASO?"]}
+{"question_id": 420, "category": "hep", "turns": ["What is a superconducting phase-transition thermometer in CLTDs also known as?"]}
+{"question_id": 421, "category": "hep", "turns": ["How can the origin of black holes in the stellar-mass range be distinguished?"]}
+{"question_id": 422, "category": "hep", "turns": ["How is transverse coherence of radiation defined?"]}
+{"question_id": 423, "category": "hep", "turns": ["How do BAO data contribute to the analysis?"]}
+{"question_id": 424, "category": "hep", "turns": ["What is the common principle shared by Micro Pattern Gaseous Detectors (MPGDs) and other gas-avalanche detectors?"]}
+{"question_id": 425, "category": "hep", "turns": ["What is the purpose of experimentally measuring the attenuation length of a fiber?"]}
+{"question_id": 426, "category": "hep", "turns": ["What is the goal of the code evaluation project mentioned?"]}
+{"question_id": 427, "category": "hep", "turns": ["What is the CUORE experiment?"]}
+{"question_id": 428, "category": "hep", "turns": ["What is the significance of a precise measurement of the cosmic neutrino flux at the Glashow resonance energy?"]}
+{"question_id": 429, "category": "hep", "turns": ["How does the Water Cherenkov technique developed by Milagro improve gamma-ray detection compared to traditional EAS arrays?"]}
+{"question_id": 430, "category": "hep", "turns": ["What defines the partition function in CDT?"]}
+{"question_id": 431, "category": "hep", "turns": ["What is the CO_2 permeability and CO_2/N_2 permselectivity of the PAF-1-CH_2NH_2\u2014cPIM-1 membrane?"]}
+{"question_id": 432, "category": "hep", "turns": ["How could the polarization be further improved in the H-jet system?"]}
+{"question_id": 433, "category": "hep", "turns": ["What is the challenge for lattice QCD in studying bottomonium?"]}
+{"question_id": 434, "category": "hep", "turns": ["What is the effect of incorporating DP-POSS into PEG polymer on the free volume of MMMs?"]}
+{"question_id": 435, "category": "hep", "turns": ["What is the estimated luminosity in PeV gamma-rays of the Crab Nebula?"]}
+{"question_id": 436, "category": "hep", "turns": ["What are the independent pieces of evidence for enhanced ionization in the region of W28?"]}
+{"question_id": 437, "category": "hep", "turns": ["How often is the target material annealed in the COMPASS target?"]}
+{"question_id": 438, "category": "hep", "turns": ["What is the purpose of the Inner Tracking System (ITS)?"]}
+{"question_id": 439, "category": "hep", "turns": ["Is all gauge curvature associated with producing forces?"]}
+{"question_id": 440, "category": "hep", "turns": ["How does the effort in underground science compare to the role played by large world-class laboratories and support facilities?"]}
+{"question_id": 441, "category": "hep", "turns": ["What is the total budget for the construction of LHAASO?"]}
+{"question_id": 442, "category": "hep", "turns": ["What is the distribution of astrophysical neutrinos in the sky largely consistent with?"]}
+{"question_id": 443, "category": "hep", "turns": ["At what threshold, in terms of the product of the charges of the projectile and target nuclei, was quasifission thought to occur based on MAD measurements?"]}
+{"question_id": 444, "category": "hep", "turns": ["What is loop quantum gravity?"]}
+{"question_id": 445, "category": "hep", "turns": ["What is the anisotropy in the axial stiffnesses of struvite-K before the phase transition?"]}
+{"question_id": 446, "category": "hep", "turns": ["What is the role of holography in deciphering the physics of dense QCD matter?"]}
+{"question_id": 447, "category": "hep", "turns": ["What are some effects of departure from Lorentz symmetry that can be contemplated in both LIV and DSR scenarios?"]}
+{"question_id": 448, "category": "hep", "turns": ["What are some of the skills that young scientists working in neutrino experiments are trained in?"]}
+{"question_id": 449, "category": "hep", "turns": ["What is the expected detection sensitivity of a 10\\ {km}^2 TAIGA for point sources in the energy range of 30-200\\ TeV?"]}
+{"question_id": 450, "category": "hep", "turns": ["What is the usual polarity of the potentials applied to the different electrodes in a standard THGEM detector?"]}
+{"question_id": 451, "category": "hep", "turns": ["What is the promise of the FCC program?"]}
+{"question_id": 452, "category": "hep", "turns": ["How does the Majumdar model study the impact of PBH early accretion on baryogenesis mechanisms?"]}
+{"question_id": 453, "category": "hep", "turns": ["What is the significance of the development of high-pressure multigrain XRD?"]}
+{"question_id": 454, "category": "hep", "turns": ["What is the metastable case in the context of vacuum stability?"]}
+{"question_id": 455, "category": "hep", "turns": ["What opportunities does AFTER@LHC offer in terms of probing the high-x domain?"]}
+{"question_id": 456, "category": "hep", "turns": ["How are both light and matter described in relation to waves?"]}
+{"question_id": 457, "category": "hep", "turns": ["Why do photons penetrate deeply into the atmosphere?"]}
+{"question_id": 458, "category": "hep", "turns": ["What were the dimensions of the sapphire absorber in the composite detector?"]}
+{"question_id": 459, "category": "hep", "turns": ["What are the competing processes that arise when electrons interact with their environment?"]}
+{"question_id": 460, "category": "hep", "turns": ["What is the current status of neutrino detection?"]}
+{"question_id": 461, "category": "hep", "turns": ["What is graphene oxide (GO) and why is it considered a promising nanofiller for preparing MMMs?"]}
+{"question_id": 462, "category": "hep", "turns": ["Why is a higher PDE important in the context of shorter radiators?"]}
+{"question_id": 463, "category": "hep", "turns": ["What is the objective of identifying major contributors to the locally observed fluxes of Cosmic Rays (CRs)?"]}
+{"question_id": 464, "category": "hep", "turns": ["What role do Dirac and Weyl semimetals play in this unification?"]}
+{"question_id": 465, "category": "hep", "turns": ["What is the pseudorapidity range covered by the Muon Spectrometer (MS)?"]}
+{"question_id": 466, "category": "hep", "turns": ["How is the concept of non-integrability illustrated in the context of a real magnetic field?"]}
+{"question_id": 467, "category": "hep", "turns": ["What is the mean free path and energy loss length for Bethe-Heitler pair production?"]}
+{"question_id": 468, "category": "hep", "turns": ["What is the potential of DUNE?"]}
+{"question_id": 469, "category": "hep", "turns": ["What are the two strategies for fabricating CO_2-facilitated transport membranes?"]}
+{"question_id": 470, "category": "hep", "turns": ["What is the central goal of white dwarf research?"]}
+{"question_id": 471, "category": "hep", "turns": ["What was the difficulty in controlling the microstructure of the deposited films?"]}
+{"question_id": 472, "category": "hep", "turns": ["What new problems arise for the standard model fermions in theories without an elementary Higgs, and how might this be detectable by precision experiments?"]}
+{"question_id": 473, "category": "hep", "turns": ["What is the preferred mass range for PBHs involved in baryogenesis?"]}
+{"question_id": 474, "category": "hep", "turns": ["What is CALIPSO and what is its primary purpose?"]}
+{"question_id": 475, "category": "hep", "turns": ["Can a pure gauge operator have any custodial quantum number?"]}
+{"question_id": 476, "category": "hep", "turns": ["How does the exchange of heat between dark matter and baryons affect the Universe?"]}
+{"question_id": 477, "category": "hep", "turns": ["How does LIV impact CPT violating leptogenesis?"]}
+{"question_id": 478, "category": "hep", "turns": ["What is the purpose of modeling hadronic cosmic-ray interactions?"]}
+{"question_id": 479, "category": "hep", "turns": ["What is the significance of the neutrino peak energy?"]}
+{"question_id": 480, "category": "hep", "turns": ["What are some additional search windows for dark matter particles besides direct and indirect detection methods?"]}
+{"question_id": 481, "category": "hep", "turns": ["What are observable particles described by?"]}
+{"question_id": 482, "category": "hep", "turns": ["What is the conclusion about the effectiveness of machine learning and deep learning applications in the field of HEP?"]}
+{"question_id": 483, "category": "hep", "turns": ["What is a white dwarf?"]}
+{"question_id": 484, "category": "hep", "turns": ["What is the significance of the phase physics of the Aharonov-Bohm (AB) and Aharonov-Casher (AC) effects?"]}
+{"question_id": 485, "category": "hep", "turns": ["What is the Long Short-Term Memory (LSTM) network and how does it differ from a traditional neural network?"]}
+{"question_id": 486, "category": "hep", "turns": ["What are the lessons learned from the type I seesaw mechanism?"]}
+{"question_id": 487, "category": "hep", "turns": ["What advantage do astrophysical neutrinos offer in the search for QG effects?"]}
+{"question_id": 488, "category": "hep", "turns": ["How does the scenario of emergent symmetry differ from unification models?"]}
+{"question_id": 489, "category": "hep", "turns": ["What is the CO_2/CH_4 mixed gas selectivity of SPES-{Ag}^+ FTM in the configuration of hollow fiber?"]}
+{"question_id": 490, "category": "hep", "turns": ["Why is the implementation of hard X-ray self-seeding more complicated than the simple description?"]}
+{"question_id": 491, "category": "hep", "turns": ["What makes the SBN program unique in sterile neutrino searches?"]}
+{"question_id": 492, "category": "hep", "turns": ["Why is a multimessenger approach important in identifying the true nature of a dark matter particle?"]}
+{"question_id": 493, "category": "hep", "turns": ["What is the purpose of detecting gamma rays in PET imaging?"]}
+{"question_id": 494, "category": "hep", "turns": ["What is a stochastic background, and how does it relate to primordial black holes?"]}
+{"question_id": 495, "category": "hep", "turns": ["What are the key questions driving numerical simulation of luminous accretion flows in AGNs?"]}
+{"question_id": 496, "category": "hep", "turns": ["Is there any evidence for new particles and interactions beyond the Standard Model based on current collider experiments and precision measurements?"]}
+{"question_id": 497, "category": "hep", "turns": ["How does the estimated gamma-ray flux compare with the bolometric luminosity of Cen A?"]}
+{"question_id": 498, "category": "hep", "turns": ["How is the emergent gauge field different from real gauge fields like those described by Yang\u2013Mills?"]}
+{"question_id": 499, "category": "hep", "turns": ["What is the benefit of measuring interactions of electron neutrinos in SBND?"]}
+{"question_id": 500, "category": "hep", "turns": ["What are the requirements for tritium processing facilities for future experiments?"]}

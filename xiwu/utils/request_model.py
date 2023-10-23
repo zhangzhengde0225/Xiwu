@@ -13,7 +13,7 @@ def request_model(prompt='hello', system_prompt=None):
             # model='openai/gpt-3.5-turbo',
             # model='hepai/xiwu-13b-0509',
             # model='lmsys/vicuna-13b',
-            model='lmsys/vicuna-7b',
+            model='hepai/vicuna-7B',
             messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": prompt},
@@ -28,9 +28,12 @@ def request_model(prompt='hello', system_prompt=None):
         full_result += i
         sys.stdout.write(i)
         sys.stdout.flush()
+        # import time
+        # time.sleep(0.5)
     print()
     return full_result
 
 prompt = 'who are you?'
 # prompt = "what's your name?"
 answer = request_model(prompt=prompt)
+print(answer)

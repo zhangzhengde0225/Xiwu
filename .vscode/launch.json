@@ -11,10 +11,10 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "justMyCode": true,
-            // "args": [
-            //     "--test", 
-            //     "true",
-            // ]
+            "args": [
+                "--model", 
+                "hepai/vicuna-13B",
+            ]
         }
     ]
 }

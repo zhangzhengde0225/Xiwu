@@ -1,7 +1,7 @@
 import hai
 import os , sys
-#hai.api_key = os.getenv("HEPAI_API_KEY")
-hai.api_key = "Hi-kqrKJvCdMgGiAoTBabZHVISSRMiOlVnxosGFfbhOVDUcveY"
+hai.api_key = os.getenv("HEPAI_API_KEY")
+# hai.api_key = ""
 models = hai.Model.list()  # 列出所有可用模型
 print(models)
 prompt='hello, what is your name?'
