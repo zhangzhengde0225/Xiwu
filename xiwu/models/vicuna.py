@@ -15,33 +15,16 @@ sys.path.insert(0, str(here.parent.parent))
 from xiwu.apis import fastchat_api as fsapi
 from xiwu.apis.fastchat_api import *
 
-# conv_xiwu = fsapi.Conversation(
-#     system="""
-# You are Xiwu, Answer questions conversationally. Gives helpful, detailed, and polite answers to the user's questions.
-# """,
-#     roles=("user", "ASSISTANT","system"),
-#     messages=(),
-#     offset=0,
-#     sep_style=fsapi.SeparatorStyle.ADD_COLON_TWO,
-#     sep=" ",
-#     sep2="</s>",
-# )
-
-# # print(conv_xiwu)
-
-# fsapi.conv_templates['xiwu'] = conv_xiwu
-
-
-class Xiwu:
+class Vicuna:
     def __init__(self, args=None, **kwargs):
         self.args = self._init_args(args, **kwargs)
         self._model, self._tokenizer = self._init_model_and_tokenizer()
         self._generate_stream_func = None
-                # self.chatio = SimpleChatIO() if self.args.style == 'simple' else RichChatIO()
+        # self.chatio = SimpleChatIO() if self.args.style == 'simple' else RichChatIO()
         self.chatio = fsapi.SimpleChatIO()
 
     def _init_args(self, args, **kwargs):
-        default_args = XiwuArgs()
+        default_args = VicunaArgs()
         if args is None:
             return default_args
         default_args.__dict__.update(args.__dict__)
@@ -158,10 +141,10 @@ class Xiwu:
 
 
 @dataclasses.dataclass
-class XiwuArgs:
+class VicunaArgs:
     # model_path: str = '/data/zzd/weights/vicuna/vicuna-7b-v1.5-16k'  # "The path to the weights. This can be a local folder or a Hugging Face repo ID."
     # model_path: str = '/dg_workfs/Beijing-CC/zdzhang/DghpcData/weights/vicuna/vicuna-7b-v1.5-16k'
-    model_path: str = '/dg_workfs/Beijing-CC/zdzhang/DghpcData/weights/weights/chathep/chathep-13b-20230509' 
+    model_path: str = '/dg_workfs/Beijing-CC/zdzhang/DghpcData/weights/weights/vicuna/vicuna-7b' 
     device: str = "cuda"  # The device type, i.e. ["cpu", "cuda", "mps", "npu"]
     gpus: int = None  # A single GPU like 1 or multiple GPUs like 0,2
     num_gpus: int = 1  # The number of GPUs to use
@@ -196,13 +179,13 @@ class XiwuArgs:
     exllama_gpu_split: str = field(default=None, metadata={"help": "Used for exllamabv2. Comma-separated list of VRAM (in GB) to use per GPU. Example: 20,7,7"})
     
 if __name__ == '__main__':
-    args = hai.parse_args_into_dataclasses(XiwuArgs)
+    args = hai.parse_args_into_dataclasses(VicunaArgs)
     # args.model_path = f'/data/zzd/vicuna/xiwu-13b-20230503'
     # args.model_path = f'/data/zzd/xiwu/xiwu-13b-20230509'
     # args.model_path = "/data/zzd/vicuna/vicuna-7b"
     # args.lazy_loading = False
     
-    chatbot = Xiwu(args)
+    chatbot = Vicuna(args)
     prompts = ['who are you?', '你是谁', '你好', '你能做什么']
     # prompts = prompts[:1]
     for prompt in prompts:
