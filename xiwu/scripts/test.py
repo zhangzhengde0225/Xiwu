@@ -1,7 +1,7 @@
 import hai
 import os , sys
-hai.api_key = os.getenv("HEPAI_API_KEY")
-# hai.api_key = ""
+#hai.api_key = os.getenv("HEPAI_API_KEY")
+hai.api_key = "Hi-kqrKJvCdMgGiAoTBabZHVISSRMiOlVnxosGFfbhOVDUcveY"
 models = hai.Model.list()  # 列出所有可用模型
 print(models)
 prompt='hello, what is your name?'
@@ -14,7 +14,9 @@ def request_model(prompt, system_prompt=None):
         #model='hepai/vicuna-7B',
         #model='hepai/vicuna-13B',
         #model='hepai/vicuna-33B',
-        model='hepai/vicuna-7B-v1.5',
+        #model='hepai/vicuna-7B-v1.5',
+        #model='hepai/llama-7B',
+        model='hepai/llama-7B-v2',
         messages=[
                 {"role": "system", "content": system_prompt},
                 {"role": "user", "content": prompt},
