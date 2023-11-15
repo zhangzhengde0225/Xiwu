@@ -5,15 +5,15 @@ from xiwu.apis.fastchat_api import (
     BaseModelAdapter, register_model_adapter,
     Conversation, get_conv_template, conv_templates
 )
-from xiwu.apis.xiwu_api import xiwu_conv
+from xiwu.apis.xiwu_api import vicuna_conv
 
-class XiwuAdapter(BaseModelAdapter):
+class VicunaAdapter(BaseModelAdapter):
     "Model adapater for Vicuna models (e.g., lmsys/vicuna-7b-v1.3)" ""
 
     use_fast_tokenizer = False
 
     def match(self, model_path: str):
-        return "xiwu" in model_path.lower()
+        return "vicuna" in model_path.lower()
      
     def load_model(self, model_path: str, from_pretrained_kwargs: dict):
         revision = from_pretrained_kwargs.get("revision", "main")
@@ -30,12 +30,9 @@ class XiwuAdapter(BaseModelAdapter):
 
     def get_default_conv_template(self, model_path: str) -> Conversation:
         """
-        hepai/xiwu-xxx
+        hepai/vicuna-xxx
         """
-        return conv_templates['xiwu']
-        # return xiwu_conv
-        # return xiwu_conv.copy()
-        # return get_conv_template("xiwu")
+        return conv_templates['vicuna']
 
     def raise_warning_for_old_weights(self, model):
         if isinstance(model, LlamaForCausalLM) and model.model.vocab_size > 32000:

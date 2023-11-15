@@ -1,6 +1,5 @@
 
 
-
 from ..repos.FastChat.fastchat.serve.inference import (load_model, 
                                                        generate_stream,
                                                        get_conv_template,
@@ -23,7 +22,7 @@ from ..repos.FastChat.fastchat.llm_judge.gen_api_answer import(
     get_answer, reorg_answer_file,
 )
 
-from ..repos.FastChat.fastchat.llm_judge.common import (
+from xiwu.repos.FastChat.fastchat.llm_judge.common import (
     load_questions,
     temperature_config,
     chat_compeletion_openai,
@@ -34,7 +33,7 @@ from ..repos.FastChat.fastchat.llm_judge.common import (
     API_RETRY_SLEEP,
 )
 
-from ..repos.FastChat.fastchat.model.model_adapter import (
+from xiwu.repos.FastChat.fastchat.model.model_adapter import (
     get_conversation_template,
     BaseModelAdapter,
     register_model_adapter,

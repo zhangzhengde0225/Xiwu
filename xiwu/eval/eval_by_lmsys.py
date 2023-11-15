@@ -6,6 +6,7 @@ import shortuuid
 from pathlib import Path
 here  = Path(__file__).parent
 import hai
+
 import openai
 
 try:
@@ -50,19 +51,20 @@ def chat_compeletion_hai(model, conv):
         try:
             # models = hai.Model.list()  # 列出所有可用模型
             # print(models)
+
             messages = conv.to_hai_api_messages()
-            # result = hai.LLM.chat(
-            #     model=model,
-            #     messages=messages,
-            #     stream=True,
-            # )
-            # full_result = ""
-            # for i in result:
-            #     full_result += i
-            #     sys.stdout.write(i)
-            #     sys.stdout.flush()
-            # output = full_result
-            output = request_model(model, messages)
+            result = hai.LLM.chat(
+                 model=model,
+                 messages=messages,
+                 stream=True,
+             )
+            full_result = ""
+            for i in result:
+                full_result += i
+                sys.stdout.write(i)
+                sys.stdout.flush()
+            output = full_result
+            #output = request_model(model, messages)
             break
         except Exception as e:
             print(type(e), e)
@@ -97,7 +99,7 @@ def get_answer(
                 chat_state, output = chat_compeletion_palm(
                     chat_state, model, conv, temperature, max_tokens
                 )
-            elif model in ["hepai/vicuna-7B", "hepai/vicuna-13B", "hepai/xiwu-13B",  "hepai/xiwu-7B"]:
+            elif model in ["hepai/vicuna-7B" ,"hepai/vicuna-13B", "hepai/xiwu-13B","openai/gpt-4","openai/gpt-3.5-turbo"]:
                 output = chat_compeletion_hai(model, conv)
             
             else:
@@ -162,11 +164,11 @@ if __name__ == "__main__":
     parser.add_argument(
         "--parallel", type=int, default=1, help="The number of concurrent API calls."
     )
-    parser.add_argument("--openai-api-base", type=str, default=None)
+    parser.add_argument("--openai-api-base", type=str, default='Hi-EtVJUUjZhtynCJYmgYItgXIbaCBgtCegAQBqXsjIpySjdCS')
     args = parser.parse_args()
 
     if args.openai_api_base is not None:
-        openai.api_base = args.openai_api_base
+        hai.api_key = args.openai_api_base
 
     prefix = f"{here.parent}/repos/FastChat/fastchat/llm_judge"
     # question_file = f"{prefix}/data/{args.bench_name}/question.jsonl"
@@ -192,10 +194,8 @@ if __name__ == "__main__":
                 answer_file,
             )
             futures.append(future)
-
         for future in tqdm.tqdm(
             concurrent.futures.as_completed(futures), total=len(futures)
         ):
             future.result()
-
     reorg_answer_file(answer_file)
