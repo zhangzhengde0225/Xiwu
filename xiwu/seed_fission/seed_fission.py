@@ -29,7 +29,7 @@ class SeedFission(BaseQADatasetSaver):
         self.newbee_bot = NewbeeBot(domain, language=language)
         self.expert_bot = ExpertBot(domain, language=language)
         self.topic_bot = TopicBot(language=language)
-        self._candidate_topics = self.data['meta'].get('candidate_topics', list())
+        self._candidate_topics = self.data['metadata'].get('candidate_topics', list())
     
     @property
     def num_enrities(self):
@@ -41,13 +41,13 @@ class SeedFission(BaseQADatasetSaver):
     
     @property
     def candidate_topics(self):
-        self._candidate_topics = self.data['meta'].get('candidate_topics', list())
+        self._candidate_topics = self.data['metadata'].get('candidate_topics', list())
         return self._candidate_topics
 
     def add_candidate_topic(self, topic):
         self._candidate_topics.append(topic)
         self._candidate_topics = list(set(self._candidate_topics))
-        self.data['meta']['candidate_topics'] = self._candidate_topics
+        self.data['metadata']['candidate_topics'] = self._candidate_topics
 
     def cal_simularity_by_topic_gpt(self, question1, question2):
         """计算两个问题的相似度"""
@@ -133,14 +133,13 @@ def main(args):
     output_dir = kwargs.get('output_dir')
     model = kwargs.get('model')
     version = args.version
-    meta = {
-        'description': f'采用SeedFission技术，利用{model}获取的关于{domain}领域的问答对数据集',
-        'labeler_group': 'Fazhi Qi, Zhengde Zhang',
+    metadata = {
+        'description': args.metadata,
     }
     entity_info = {
         'category': domain,
-        "source": 'ChatGPT',
-        "labeler": 'Zhengde Zhang',
+        "source": args.model,
+        "labeler": args.author,
     }
 
     output_file = f'{"_".join(domain.split()).lower()}_QA_datasets.json'
@@ -148,8 +147,8 @@ def main(args):
     sf = SeedFission(
         domain, 
         language=args.language, 
-        version=arg, 
-        meta=meta, 
+        version=args.version, 
+        metadata=metadata,
         output_file=output_file)
     sf(seed, num_to_gen=num_to_gen, max_entities=max_entities, entity_info=entity_info, model=model)
 

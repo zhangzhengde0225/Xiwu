@@ -3,9 +3,12 @@ import time
 import json
 import os, sys
 import shortuuid
+from dataclasses import dataclass, field
 from pathlib import Path
 here  = Path(__file__).parent
 import hai
+import concurrent.futures
+import tqdm
 
 import openai
 
@@ -123,52 +126,9 @@ def get_answer(
     with open(answer_file, "a") as fout:
         fout.write(json.dumps(ans) + "\n")
 
-
-if __name__ == "__main__":
-    import argparse
-    import concurrent.futures
-    import tqdm
-    
-    parser = argparse.ArgumentParser()
-    parser.add_argument(
-        "--bench-name",
-        type=str,
-        default="mt_bench",
-        help="The name of the benchmark question set.",
-    )
-    parser.add_argument("--answer-file", type=str, help="The output answer file.")
-    parser.add_argument("--model", type=str, default="gpt-3.5-turbo")
-    parser.add_argument(
-        "--num-choices",
-        type=int,
-        default=1,
-        help="How many completion choices to generate.",
-    )
-    parser.add_argument(
-        "--force-temperature", type=float, help="Forcibly set a sampling temperature."
-    )
-    parser.add_argument(
-        "--max-tokens",
-        type=int,
-        default=1024,
-        help="The maximum number of new generated tokens.",
-    )
-    parser.add_argument(
-        "--question-begin",
-        type=int,
-        help="A debug option. The begin index of questions.",
-    )
-    parser.add_argument(
-        "--question-end", type=int, help="A debug option. The end index of questions."
-    )
-    parser.add_argument(
-        "--parallel", type=int, default=1, help="The number of concurrent API calls."
-    )
-    parser.add_argument("--openai-api-base", type=str, default='Hi-EtVJUUjZhtynCJYmgYItgXIbaCBgtCegAQBqXsjIpySjdCS')
-    args = parser.parse_args()
-
-    if args.openai_api_base is not None:
-        hai.api_key = args.openai_api_base
+def main(args):
+    if args.hepai_api_key is not None:
+        hai.api_key = args.hepai_api_key
 
     prefix = f"{here.parent}/repos/FastChat/fastchat/llm_judge"
     # question_file = f"{prefix}/data/{args.bench_name}/question.jsonl"
@@ -180,6 +140,7 @@ if __name__ == "__main__":
     else:
         # answer_file = f"{prefix}/data/{args.bench_name}/model_answer/{args.model}.jsonl"
         answer_file = f"{here.parent.parent}/data/xiwu_eval_dataset/model_answer/{args.model}.jsonl"
+    # assert os.path.exists(answer_file), f"Answer file {answer_file} does not exist."
     print(f"Output to {answer_file}")
     
     with concurrent.futures.ThreadPoolExecutor(max_workers=args.parallel) as executor:
@@ -199,3 +160,27 @@ if __name__ == "__main__":
         ):
             future.result()
     reorg_answer_file(answer_file)
+
+
+@dataclass
+class Args:
+    # work_dir: str = field(default=f"{here}")
+    bench_name: str = "mt_bench"
+    answer_file: str = field(default=None)
+    model: str = "gpt-3.5-turbo"
+    num_choices: int = 1  # How many completion choices to generate.
+    force_temperature: float = field(default=None)
+    max_tokens: int = 1024
+    question_begin: int = field(default=None)
+    question_end: int = field(default=None)
+    parallel: int = 1
+    hepai_api_key: str = field(default_factory=lambda: os.environ.get("HEPAI_API_KEY"))
+
+if __name__ == "__main__":
+    args = hai.parse_args(Args)
+    
+
+    main(args)
+
+    
+    

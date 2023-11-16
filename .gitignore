@@ -2,6 +2,7 @@
 data/*
 xiwu/scripts/*.txt
 
+.vscode
 
 # .vscode
 hepai-scientist.code-workspace
