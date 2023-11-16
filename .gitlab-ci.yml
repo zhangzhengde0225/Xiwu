@@ -1,0 +1,19 @@
+stages:
+  - deploy
+
+push_to_github:
+  stage: deploy
+  tags:
+    - gitlab-to-github
+  script:
+    - whoami
+    - cd /tmp
+    - export PROJECT_NAME=Xiwu
+    - git clone --bare https://code.ihep.ac.cn/zdzhang/$PROJECT_NAME.git
+    - cd $PROJECT_NAME.git
+    - git push --mirror git@github.com:zhangzhengde0225/$PROJECT_NAME.git
+    - cd ..
+    - rm -rf $PROJECT_NAME.git
+    - export PROJECT_NAME=
+  only:
+    - main
