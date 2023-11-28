@@ -13,7 +13,7 @@ here = Path(__file__).parent
 
 sys.path.insert(0, str(here.parent.parent))
 from xiwu.apis import fastchat_api as fsapi
-from xiwu.apis.fastchat_api import *
+from xiwu.apis.fastchat_api import * 
 
 # conv_xiwu = fsapi.Conversation(
 #     system="""

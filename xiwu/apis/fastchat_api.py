@@ -31,6 +31,24 @@ from xiwu.repos.FastChat.fastchat.llm_judge.common import (
     API_ERROR_OUTPUT,
     API_MAX_RETRY,
     API_RETRY_SLEEP,
+    load_model_answers,
+    load_judge_prompts,
+    check_data,
+    play_a_match_pair,
+    play_a_match_single,
+    get_model_list,
+    Judge,
+    MatchPair,
+    MatchSingle,
+    NEED_REF_CATS,
+)
+
+from ..repos.FastChat.fastchat.llm_judge.gen_judgment import (
+    make_match_single,
+    make_judge_single,
+    make_judge_pairwise,
+    make_match_all_pairs,
+    make_match,
 )
 
 from xiwu.repos.FastChat.fastchat.model.model_adapter import (
