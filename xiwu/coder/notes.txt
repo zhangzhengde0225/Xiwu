@@ -1,0 +1,25 @@
+
+
+Gam is gamma
+
+cmt is cmake of BOSS
+
+head file is in the 同名目录
+src 里是源文件
+share里是供别人引用的配置文件
+
+分析过程有：Control xxx， Vertex等11个
+
+
+Calibration 用于做刻度的代码
+Analysis 用于做分析的代码
+Event 定义各种示例数据的类型
+validation 也是分析代码
+external 调用外部的包，如ROOT, GEANT4
+Simulation 模拟探测器本身
+Generator 产生粒子的代码
+
+分析相关的比较多的analysis、event、validation、external
+
+
+
