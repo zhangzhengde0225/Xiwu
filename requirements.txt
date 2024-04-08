@@ -1,0 +1,5 @@
+
+numpy
+transformers
+torch
+psutil>=5.9.8
