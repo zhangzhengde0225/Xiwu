@@ -1,5 +1,5 @@
 
 numpy
-transformers
+transformers>=4.39.3
 torch
 psutil>=5.9.8

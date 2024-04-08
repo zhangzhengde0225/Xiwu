@@ -1,24 +1,28 @@
 import os, sys
 from pathlib import Path
 here = Path(__file__).parent
-if str(here.parent.parent) not in sys.path:
-    sys.path.insert(0, str(here.parent.parent))
+
 from typing import Optional
-import hai
-import torch
-from hai import BaseWorkerModel
+import hepai
+from hepai import BaseWorkerModel
 from dataclasses import dataclass, field
-from xiwu.models.vicuna import Vicuna
 
-
-
+try:
+    from xiwu.version import __version__
+except:
+    sys.path.insert(1, str(here.parent.parent.parent))
+    from xiwu.version import __version__
+from xiwu import YamlConfig
+from xiwu.models.xiwu_ import Xiwu
+# from xiwu.apis import fastchat_api as fsapi
+# from xiwu.apis.fastchat_api import *
 class WorkerModel(BaseWorkerModel):
     def __init__(self, name, **kwargs):
         self.name = name  # name属性用于用于请求指定调研的模型
-        self.vicuna= Vicuna()
+        self.xiwu = Xiwu(**kwargs)
 
     def messages2conv(self, messages):
-        conv = self.vicuna.get_conv()
+        conv = self.xiwu.get_conv()
         # 读取messages中的系统消息
         for message in messages:
             role = message["role"]
@@ -40,15 +44,15 @@ class WorkerModel(BaseWorkerModel):
         # 自己的执行逻辑, 例如: # 
         messages= kwargs.pop('messages', None)
         conv = self.messages2conv(messages)
-        prompt = self.vicuna.get_prompt_by_conv(conv)
-        return self.vicuna.inference(prev_text=prompt)
-
+        prompt = self.xiwu.get_prompt_by_conv(conv)
+        return self.xiwu.inference(prev_text=prompt)
+    
 
 # (1) 实现WorkerModel
 @dataclass
 class ModelArgs:
-    name: str = "hepai/vicuna-7B"  # worker的名称，用于注册到控制器
-    model_path: str ='/dg_workfs/Beijing-CC/zdzhang/DghpcData/weights/weights/vicuna/vicuna-7b'
+    name: str = "hepai/xiwu-13B"  # worker的名称，用于注册到控制器
+    model_path: str =f'{YamlConfig.PRETRAINED_WEIGHTS_DIR}/chathep/chathep-13b-20230509'
     # 其他参数
 
 # (2) worker的参数配置和启动代码
@@ -64,17 +68,17 @@ class WorkerArgs:
     no_register: bool = False  # 不注册到控制器
     permissions: str = 'groups:all'
     #permissions: str = 'groups: hepai;users: zdzhang@ihep.ac.cn,yaohd@ihep.ac.cn,siyangchen@ihep.ac.cn'  # 模型的权限授予，分为用户和组，用;分隔，例如：需要授权给所有组、a用户、b用户：'groups: all; users: a, b; owner: c'
-    description: str = 'GPT-3.5 is a large language model released by openai in Nov. 2022'  # 模型的描述
+    description: str = 'Xiwu from HepAI'  # 模型的描述
     author: str = 'hepai'  # 模型的作者
-    test: bool = False  # 测试模式，不会真正启动worker，只会打印参数
+    test: bool = True  # 测试模式，不会真正启动worker，只会打印参数
 
 def run_worker(**kwargs):
     # worker_args = hai.parse_args_into_dataclasses(WorkerArgs)  # 解析参数
-    model_args, worker_args = hai.parse_args_into_dataclasses((ModelArgs, WorkerArgs))  # 解析多个参数类
+    model_args, worker_args = hepai.parse_args_into_dataclasses((ModelArgs, WorkerArgs))  # 解析多个参数类
     # print(worker_args)
     model = WorkerModel(  # 获取模型
-        name=model_args.name
-        # 此处可以传入其他参数
+        name=model_args.name,
+        model_path=model_args.model_path
         )
     
     print(model_args)
@@ -90,7 +94,7 @@ def run_worker(**kwargs):
         print(ret)
         #return
 
-    hai.worker.start(
+    hepai.worker.start(
         daemon=False,  # 是否以守护进程的方式启动
         model=model,
         worker_args=worker_args,

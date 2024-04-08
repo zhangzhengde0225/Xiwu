@@ -4,10 +4,10 @@ from pathlib import Path
 here = Path(__file__).parent
 import argparse
 try:
-    from xiwu.apis import add_model_args, main
+    from xiwu.apis.fastchat_api import add_model_args, main
 except:
     sys.path.append(f'{here.parent.parent}')
-    from xiwu.apis import add_model_args, main
+    from xiwu.apis.fastchat_api import add_model_args, main
     
     
     

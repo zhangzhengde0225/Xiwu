@@ -1,0 +1,4 @@
+version: 0.1
+
+pretrained_weights_dir: /data/zzd/weights  # specify the directory of pretrained weights
+

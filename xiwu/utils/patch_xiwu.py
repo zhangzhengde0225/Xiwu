@@ -6,6 +6,8 @@ def patch_xiwu():
     print(f'Patching xiwu, registering xiwu_conv and XiwuAdapter...')
     register_model_adapter(XiwuAdapter)
     register_conv_template(xiwu_conv, override=True)
+
+    
 def patch_vicuna():
     print(f'Patching vicuna, registering vicuna_conv and VicunaAdapter...')
     register_model_adapter(VicunaAdapter)
