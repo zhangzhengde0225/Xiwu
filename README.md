@@ -13,7 +13,7 @@ https://github.com/zhangzhengde0225/Xiwu/archive/refs/heads/main.zip)
 <div align="center">
   <p>
     <a href="https://ai.ihep.ac.cn/m/xiwu" target="_blank">
-      <img width="70%" src="/assets/GA.png" alt="YOLO Vision banner"></a>
+      <img width="70%" src="/assets/GA.png" alt="Graphical Abstract"></a>
   </p>
 </div>
 
@@ -26,6 +26,16 @@ Xi(溪): stremlet → drops of water, Wu(悟): understand and gaining insight
 + Xiwu, the first LLM specilized for high energy physics outperforms the foundation model in accuracy for domain-specific knowledge question answering, and exceeds GPT-4 in BOSS (BESIII Offline Software System) code
 + Xiwu is a Level 2 model that can smoothly switch between foundation models such as LLaMA, Vicuna, ChatGLM and Grok-1.
 + Xiwu equipped with two learning systems: The Just-In-Time Learning system based on RAG is capable of acquiring new knowledge instantly, and the On-The-Fly Traning system based on secondary pre-training and fine-tuning can be used to enhance the model's performance in specific tasks.
+
+# Comparison
+
+<div align="center">
+  <p>
+    <img width="80%" src="/assets/hallucination.png" alt="Comparision"></a>
+  </p>
+  <p>Comparsion of GPT-4 and Xiwu in HEP Kownledge Q&A and BOSS Code Generation</p>
+</div>
+
 
 # Quick Start
 
