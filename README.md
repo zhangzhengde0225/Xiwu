@@ -31,7 +31,7 @@ Xi(溪): stremlet → drops of water, Wu(悟): understand and gaining insight
 
 <div align="center">
   <p>
-    <img width="80%" src="/assets/hallucination.png" alt="Comparision"></a>
+    <img width="70%" src="/assets/hallucination.png" alt="Comparision"></a>
   </p>
   <p>Comparsion of GPT-4 and Xiwu in HEP Kownledge Q&A and BOSS Code Generation</p>
 </div>
