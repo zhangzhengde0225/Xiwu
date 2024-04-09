@@ -27,16 +27,6 @@ Xi(溪): stremlet → drops of water, Wu(悟): understand and gaining insight
 + Xiwu is a Level 2 model that can smoothly switch between foundation models such as LLaMA, Vicuna, ChatGLM and Grok-1.
 + Xiwu equipped with two learning systems: The Just-In-Time Learning system based on RAG is capable of acquiring new knowledge instantly, and the On-The-Fly Traning system based on secondary pre-training and fine-tuning can be used to enhance the model's performance in specific tasks.
 
-# Comparison
-
-<div align="center">
-  <p>
-    <img width="70%" src="/assets/hallucination.png" alt="Comparision"></a>
-  </p>
-  <p>Comparsion of GPT-4 and Xiwu in HEP Kownledge Q&A and BOSS Code Generation</p>
-</div>
-
-
 # Quick Start
 
 ## Deploy
@@ -65,6 +55,16 @@ Refer to the [models](docs/models.md) for the trained weights.
 bash scripts/train_xiwu.sh 
 ```
 
+## Performance Comparison
+
+<div align="center">
+  <p>
+    <img width="80%" src="/assets/hallucination.png" alt="Comparision"></a>
+  </p>
+  <p>Comparsion of GPT-4 and Xiwu in HEP Kownledge Q&A and BOSS Code Generation</p>
+</div>
+
+
 # Contributors
 
 Xiwu is authored by Zhengde Zhang, Yiyu Zhang, Haodong Yao, Jianwen Luo, Rui Zhao, Bo Huang, Jiameng Zhao, Yipu Liao, Ke Li, Lina Zhao, Jun Cao, Fazhi Qi and Changzheng Yuan. 
@@ -76,6 +76,8 @@ Currently, it is maintained by Zhengde Zhang (zdzhang@ihep.ac.cn).
 This work is Supported by the Informatization Plan of Chinese Academy of Science, Grant
 No. CAS-WX2022SF-0104 and "From 0 to 1" Original Innovation Project of IHEP, Grant No. E3545PU2.
 We would like to express our gratitude to Beijiang Liu, Yaquan Fang, Gang Li, Wuming Luo, Ye Yuan, Shengsen Sun, Yi Jiao and others who are not listed here for engaging in beneficial discussions or providing computing resources.
+
+We are very grateful to the [LLaMA](https://github.com/meta-llama/llama), [FastChat](https://github.com/lm-sys/FastChat) projects for the foundation models.
 
 # License
 
