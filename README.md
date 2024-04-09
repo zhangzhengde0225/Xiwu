@@ -10,7 +10,12 @@ https://github.com/zhangzhengde0225/Xiwu/archive/refs/heads/main.zip)
 
 # Xiwu
 
-<div style="text-align: center;"><img src="/assets/GA.png" width="70%" height="50%" /></div>
+<div align="center">
+  <p>
+    <a href="https://ai.ihep.ac.cn/m/xiwu" target="_blank">
+      <img width="70%" src="/assets/GA.png" alt="YOLO Vision banner"></a>
+  </p>
+</div>
 
 The **HEP·Xiwu(溪悟)** a basis flexible and learnable Large Language Model (LLM) tailored for High Energy Physics (HEP) research field. This model is designed to possess exceptional capabilities in **common sense answering**, **BOSS code generation**, and **physical logical reasoning**.
 
@@ -20,15 +25,9 @@ Xi(溪): stremlet → drops of water, Wu(悟): understand and gaining insight
 
 + Xiwu, the first LLM specilized for high energy physics outperforms the foundation model in accuracy for domain-specific knowledge question answering, and exceeds GPT-4 in BOSS (BESIII Offline Software System) code
 + Xiwu is a Level 2 model that can smoothly switch between foundation models such as LLaMA, Vicuna, ChatGLM and Grok-1.
-+ Xiwu equipped with two learning systems: **Just-In-Time Learning** system based on RAG is capable of acquiring new knowledge instantly, and **On-The-Fly Traning** system based on secondary pre-training and fine-tuning can be used to enhance the model's performance in specific tasks.
++ Xiwu equipped with two learning systems: The Just-In-Time Learning system based on RAG is capable of acquiring new knowledge instantly, and the On-The-Fly Traning system based on secondary pre-training and fine-tuning can be used to enhance the model's performance in specific tasks.
 
 # Quick Start
-
-## Train
-
-```bash
-bash scripts/train_xiwu.sh 
-```
 
 ## Deploy
 + CLI Demo  
@@ -46,9 +45,15 @@ bash scripts/deploy_webui.sh
 ```
 The webui is the front end of the system, and you can access the webui through the browser.
 
-## Trained Weights
+### Trained Weights
 
 Refer to the [models](docs/models.md) for the trained weights.
+
+## Train on Custom Data
+
+```bash
+bash scripts/train_xiwu.sh 
+```
 
 # Contributors
 
