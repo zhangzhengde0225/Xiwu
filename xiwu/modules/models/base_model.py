@@ -24,6 +24,7 @@ from xiwu.apis.fastchat_api import (
 )
 from xiwu import CONST, ASSEMBLER
 from xiwu.configs.basic_config import BaseArgs
+from ..adapters.adapt_oai import OAIAdapter
 
 
 @dataclass
@@ -38,6 +39,7 @@ class XBaseModel:
         self.args = self._merge_args(**kwargs)
         self._model, self._tokenizer = self._init_model_and_tokenizer()
         self._generate_stream_func = None
+        self.name = self._init_model_name()
 
     def _merge_args(self, **kwargs):
         self.args.__dict__.update(**kwargs)
@@ -53,6 +55,12 @@ class XBaseModel:
         if self.args.lazy_loading:
             return None, None
         return self.load_model()
+    
+    def _init_model_name(self):
+        if self.args.model_name is not None:
+            return self.args.model_name
+        model_name = self.args.model_path.split("/")[-1]
+        return model_name
     
     @property
     def model(self):
@@ -193,23 +201,30 @@ class XBaseModel:
         """
         args = self.args
         temperature = kwargs.pop("temperature", args.temperature)
-
-        stop_str = kwargs.pop("stop_str", None)
+        max_new_tokens = kwargs.pop("max_new_tokens", args.max_new_tokens)
+        stop_str = kwargs.pop("stop_str", args.stop_str)
         stop_token_ids = kwargs.pop("stop_token_ids", None)
-        repetition_penalty = kwargs.pop("repetition_penalty", 1.0)
-        judge_sent_end = kwargs.pop("judge_sent_end", False)
-        stream = kwargs.pop("stream", False)
+        repetition_penalty = kwargs.pop("repetition_penalty", args.repetition_penalty)
+        judge_sent_end = kwargs.pop("judge_sent_end", args.judge_sent_end)
+        stream = kwargs.pop("stream", args.stream)
         context_len = get_context_length(self.model.config)
+        echo = kwargs.pop("echo", args.echo)
+        logprobs = kwargs.pop("logprobs", args.logprobs)
+        top_p = kwargs.pop("top_p", args.top_p)
+        top_k = kwargs.pop("top_k", args.top_k)
 
         gen_params = {
             "model": args.model_path,  # 其实没用
             "prompt": prev_text,
             "temperature": temperature,
-            "max_new_tokens": args.max_new_tokens,
+            "top_p": top_p,
+            "top_k": top_k,
+            "max_new_tokens": max_new_tokens,
             "stop": stop_str,
             "stop_token_ids": stop_token_ids,
             "repetition_penalty": repetition_penalty,
-            "echo": False,
+            "echo": echo,
+            "logprobs": logprobs,
         }
         
         output_stream = self.generate_stream_func(
@@ -221,6 +236,15 @@ class XBaseModel:
             judge_sent_end=judge_sent_end,
             # stream_interval=2,    
             )
+        
+        if args.oai_format:
+            return OAIAdapter.convert_output_to_oai_format(
+                output_stream,
+                model_name=self.name, 
+                stream=stream,
+                )
+        
         return output_stream
         # return self.chatio.stream_output(output_stream)
+
     

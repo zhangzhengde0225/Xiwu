@@ -27,13 +27,13 @@ class WorkerModel(BaseWorkerModel):
         messages= kwargs.pop('messages', None)
         conv = self.xmodel.messages2conv(messages)
         prompt = self.xmodel.get_prompt_by_conv(conv)
-        return self.xmodel.inference(prev_text=prompt, **kwargs)
-
+        chatcmpl: dict = self.xmodel.inference(prev_text=prompt, **kwargs)
+        return chatcmpl
 
 # (1) 实现WorkerModel
 @dataclass
 class ModelArgs(BaseArgs):
-    name: str = "lmsys/vicuna-7B"  # worker的名称，用于注册到控制器
+    name: str = "lmsys/vicuna-7b"  # worker的名称，用于注册到控制器
     model_path: str = 'lmsys/vicuna-7b'
     # 其他参数
 
@@ -48,7 +48,7 @@ class WorkerArgs:
     limit_model_concurrency: int = 5  # 限制模型的并发请求
     stream_interval: float = 0.  # 额外的流式响应间隔
     no_register: bool = False  # 不注册到控制器
-    permissions: str = 'groups:all,PAGY'
+    permissions: str = 'groups:all,PAYG,zc3900; owner: hepai@ihep.ac.cn'
     #permissions: str = 'groups: hepai;users: zdzhang@ihep.ac.cn,yaohd@ihep.ac.cn,siyangchen@ihep.ac.cn'  # 模型的权限授予，分为用户和组，用;分隔，例如：需要授权给所有组、a用户、b用户：'groups: all; users: a, b; owner: c'
     description: str = 'Vicuna from LMSYS'  # 模型的描述
     author: str = 'LMSYS'  # 模型的作者
@@ -64,15 +64,25 @@ def run_worker(**kwargs):
     print(worker_args)
     
     if worker_args.test:
-        ret = model.inference(messages=[
+        stream = True
+        chatcmpl: dict = model.inference(messages=[
                 {"role": "system", "content": "Answering questions conversationally"},
                 {"role": "user", "content": 'who are you?'},
                 ## 如果有多轮对话，可以继续添加，"role": "assistant", "content": "Hello there! How may I assist you today?"
                 ## 如果有多轮对话，可以继续添加，"role": "user", "content": "I want to buy a car."
             ],
-            stream=False,
+            stream=stream,
             )
-        print(ret)
+        if not stream:
+            choice = chatcmpl["choices"][0]
+            response = choice["message"]["content"]
+            print(response)
+        else:
+            for chunk in chatcmpl:
+                choice = chunk["choices"][0]
+                delta = choice['delta']['content']
+                print(delta, end='', flush=True)
+            pass
         #return
 
     hepai.worker.start(model=model, worker_args=worker_args, **kwargs)

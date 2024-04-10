@@ -27,11 +27,9 @@ class Vicuna(XBaseModel):
         self.chatio = fsapi.SimpleChatIO()
     
     def inference(self, prev_text, **kwargs):
-        res = super().inference(prev_text=prev_text, **kwargs)
-        return self.chatio.stream_output(
-            res, 
-            # self.args.style,
-            )
+        chatcmpl: dict = super().inference(prev_text=prev_text, **kwargs)
+        return chatcmpl
+        # return self.chatio.stream_output(res)
 
 
 @dataclasses.dataclass
