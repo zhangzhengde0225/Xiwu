@@ -13,16 +13,17 @@ except:
     sys.path.insert(1, str(here.parent.parent.parent))
     from xiwu.version import __version__
 from xiwu import YamlConfig
-from xiwu.models.xiwu_ import Xiwu
-# from xiwu.apis import fastchat_api as fsapi
-# from xiwu.apis.fastchat_api import *
+from xiwu.modules.models.xiwu_ import Xiwu
+from xiwu.apis.fastchat_api import Conversation
+
+
 class WorkerModel(BaseWorkerModel):
     def __init__(self, name, **kwargs):
         self.name = name  # name属性用于用于请求指定调研的模型
         self.xiwu = Xiwu(**kwargs)
 
     def messages2conv(self, messages):
-        conv = self.xiwu.get_conv()
+        conv: Conversation = self.xiwu.get_conv()
         # 读取messages中的系统消息
         for message in messages:
             role = message["role"]
@@ -52,7 +53,7 @@ class WorkerModel(BaseWorkerModel):
 @dataclass
 class ModelArgs:
     name: str = "hepai/xiwu-13B"  # worker的名称，用于注册到控制器
-    model_path: str =f'{YamlConfig.PRETRAINED_WEIGHTS_DIR}/chathep/chathep-13b-20230509'
+    model_path: str =f'xiwu/xiwu-13b-20230509'
     # 其他参数
 
 # (2) worker的参数配置和启动代码

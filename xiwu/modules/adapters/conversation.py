@@ -5,7 +5,7 @@ from xiwu.apis.fastchat_api import (
 )
 
 
-class XiwuConversation(Conversation):
+class XConversation(Conversation):
     def to_hai_api_messages(self):
         ret = [{"role": "system", "content": self.system_message}]
         for i, (_, msg) in enumerate(self.messages[self.offset :]):
@@ -15,10 +15,19 @@ class XiwuConversation(Conversation):
                 if msg is not None:
                     ret.append({"role": "assistant", "content": msg})
         return ret
-    
 
+class VicunaConversation(Conversation):
+    def to_hai_api_messages(self):
+        ret = [{"role": "system", "content": self.system_message}]
+        for i, (_, msg) in enumerate(self.messages[self.offset :]):
+            if i % 2 == 0:
+                ret.append({"role": "user", "content": msg})
+            else:
+                if msg is not None:
+                    ret.append({"role": "assistant", "content": msg})
+        return ret
 
-xiwu_conv = XiwuConversation(
+xiwu_conv = XConversation(
     name='xiwu',
     system_message="""
 You are ChatHEP, Answer questions conversationally. Gives helpful, detailed, and polite answers to the user's questions.
@@ -30,21 +39,11 @@ You are ChatHEP, Answer questions conversationally. Gives helpful, detailed, and
     sep=" ",
     sep2="</s>",
 )
-class VicunaConversation(Conversation):
-    def to_hai_api_messages(self):
-        ret = [{"role": "system", "content": self.system_message}]
-        for i, (_, msg) in enumerate(self.messages[self.offset :]):
-            if i % 2 == 0:
-                ret.append({"role": "user", "content": msg})
-            else:
-                if msg is not None:
-                    ret.append({"role": "assistant", "content": msg})
-        return ret
-    
+
 vicuna_conv =VicunaConversation(
     name='vicuna',
     system_message="""
-You are ChatHEP, Answer questions conversationally. Gives helpful, detailed, and polite answers to the user's questions.
+You are Vicuna, Answer questions conversationally. Gives helpful, detailed, and polite answers to the user's questions.
 """,
     roles=("USER", "ASSISTANT"),
     offset=0,
@@ -53,5 +52,3 @@ You are ChatHEP, Answer questions conversationally. Gives helpful, detailed, and
     sep=" ",
     sep2="</s>",
 )
-
-# register_conv_template(xiwu_conv, override=False)
