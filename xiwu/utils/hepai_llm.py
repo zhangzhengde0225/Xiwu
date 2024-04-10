@@ -1,5 +1,5 @@
 import os, sys
-import hai
+import hepai
 import ast
 import json
 import re
@@ -74,7 +74,7 @@ class HepAILLM:
                     ## 如果有多轮对话，可以继续添加，"role": "user", "content": "I want to buy a car."
                 ]
         self.tried += 1
-        result = hai.LLM.chat(
+        result = hepai.LLM.chat(
                 model=model,
                 api_key=api_key,
                 openai_api_key=openai_api_key,

@@ -1,5 +1,6 @@
 
 import time
+import json
 from xiwu.apis.xiwu_api import ChatLogs
 
 class OAIAdapter:
@@ -108,13 +109,15 @@ class OAIAdapter:
             # build chat completion chunk
             chunk_dict = OAIAdapter.create_chat_completion_chunk_dict(
                 created, model_name, one_token, logprobs, finish_reason)
-            yield chunk_dict
+            # yield chunk_dict
+            yield f'data: {json.dumps(chunk_dict)}\n\n'
         # 最后还有一个token
         last_token = " ".join(text[pre::])
         full_response += last_token
         chunk_dict = OAIAdapter.create_chat_completion_chunk_dict(
             created, model_name, last_token, logprobs, finish_reason)
-        yield chunk_dict
+        # yield chunk_dict
+        yield f'data: {json.dumps(chunk_dict)}\n\n'
 
         # 把所有的回复合并进来，并保存
         if cls.save_to_chat_logs:

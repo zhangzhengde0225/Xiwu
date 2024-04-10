@@ -2,6 +2,7 @@ import os, sys
 from pathlib import Path
 here = Path(__file__).parent
 
+import json
 from typing import Optional
 from dataclasses import dataclass, field
 
@@ -29,6 +30,14 @@ class WorkerModel(BaseWorkerModel):
         prompt = self.xmodel.get_prompt_by_conv(conv)
         chatcmpl: dict = self.xmodel.inference(prev_text=prompt, **kwargs)
         return chatcmpl
+    
+    def chat_completions(self, **kwargs):
+        stream = kwargs.get('stream', False)
+        if stream:
+            return self.inference(**kwargs)
+        else:
+            return self.inference(**kwargs)
+            
 
 # (1) 实现WorkerModel
 @dataclass
@@ -41,9 +50,9 @@ class ModelArgs(BaseArgs):
 # 用dataclasses修饰器快速定义参数类
 @dataclass
 class WorkerArgs:
-    host: str = "0.0.0.0"  # worker的地址，0.0.0.0表示外部可访问，127.0.0.1表示只有本机可访问
+    host: str = "127.0.0.1"  # worker的地址，0.0.0.0表示外部可访问，127.0.0.1表示只有本机可访问
     port: str = "auto"  # 默认从42902开始
-    controller_address: str = "http://aiapi.ihep.ac.cn:42901"  # 控制器的地址
+    controller_address: str = "http://127.0.0.1:21601"  # 控制器的地址
     worker_address: str = "auto"  # 默认是http://<ip>:<port>
     limit_model_concurrency: int = 5  # 限制模型的并发请求
     stream_interval: float = 0.  # 额外的流式响应间隔
@@ -79,6 +88,8 @@ def run_worker(**kwargs):
             print(response)
         else:
             for chunk in chatcmpl:
+                chunk = chunk[6::] if chunk.startswith("data: ") else chunk
+                chunk = json.loads(chunk)
                 choice = chunk["choices"][0]
                 delta = choice['delta']['content']
                 print(delta, end='', flush=True)
