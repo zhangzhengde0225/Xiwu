@@ -1,8 +1,10 @@
 
+
 xiwu/repos/FastChat_back
 xiwu/scripts/wandb/*
 xiwu/data/seed_fission/*.tar.gz
 *nohup.out*
+xiwu/data/seed_fission/nohut.out*
 xiwu/data/seed_fission/nohup.out*
 xiwu/data/seed_fission/error*
 
