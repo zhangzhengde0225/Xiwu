@@ -7,7 +7,6 @@ from typing import List, Dict
 import os, sys
 from pathlib import Path
 import json
-import schedule
 import datetime
 import atexit
 import uuid
@@ -27,7 +26,10 @@ class ChatLogs:
         self.chat_logs_dir = f'{Path.home()}/.{__appname__}/chat_logs'
         self._file_path = f'{self.chat_logs_dir}/{self.get_file_name()}'
         self._data = self._init_data()
+        self._register_event()
 
+    def _register_event(self):
+        import schedule
         schedule.every(10).minutes.do(self.save_to_file)
         schedule.every().day.at("00:00").do(self.swith_file_and_data)
         atexit.register(self.save_to_file)

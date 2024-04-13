@@ -5,8 +5,14 @@ import json
 from ...utils.chat_logs import ChatLogs
 
 class OAIAdapter:
-    chat_logs = ChatLogs()
+    _chat_logs: ChatLogs = None
     save_to_chat_logs = False
+
+    @property
+    def chat_logs(cls):
+        if cls._chat_logs is None:
+            cls._chat_logs = ChatLogs()
+        return cls._chat_logs
 
     @classmethod
     def convert_output_to_oai_format(cls, output, model_name, stream=False):

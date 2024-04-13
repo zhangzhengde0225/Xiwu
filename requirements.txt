@@ -3,3 +3,12 @@ numpy
 transformers>=4.39.3
 torch
 psutil>=5.9.8
+hepai>=1.1.3
+accelerate>=0.29.2
+prompt_toolkit>=3.0.43
+
+rich>=13.7.1  # for cli
+shortuuid>=1.0.13
+anthropic>=0.25.1
+
+SentencePiece>=0.2.0 
