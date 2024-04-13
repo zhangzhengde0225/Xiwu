@@ -58,7 +58,7 @@ class ModelArgs(BaseArgs):
 class WorkerArgs:
     host: str = "0.0.0.0"  # worker的地址，0.0.0.0表示外部可访问，127.0.0.1表示只有本机可访问
     port: str = "auto"  # 默认从42902开始
-    controller_address: str = "http://127.0.0.1:42901"  # 控制器的地址
+    controller_address: str = "http://aiapi.ihep.ac.cn:42901"  # 控制器的地址
     worker_address: str = "auto"  # 默认是http://<ip>:<port>
     limit_model_concurrency: int = 5  # 限制模型的并发请求
     stream_interval: float = 0.  # 额外的流式响应间隔
