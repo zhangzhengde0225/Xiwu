@@ -4,8 +4,9 @@ import time
 import json
 import torch
 import os
+import damei as dm
 
-from xiwu.apis.xiwu_api import BaseArgs, XAssembler
+from xiwu.apis.xiwu_api import BaseArgs, XAssembler, OAIAdapter
 
 from xiwu.apis.fastchat_api import (
     ExllamaConfig, XftConfig, GptqConfig, AWQConfig, 
@@ -14,10 +15,41 @@ from xiwu.apis.fastchat_api import (
     get_context_length, get_conv_template, get_conversation_template,
     Conversation,
 )
-from xiwu import ASSEMBLER
+from xiwu import ASSEMBLER, XBaseModel
+
+
+class XChatIO(SimpleChatIO):
+    @classmethod
+    def stream_oai_chatcompletions(cls, chatcmpl):
+        full_response = ""
+        # for line in response.iter_lines():
+        for line in chatcmpl:
+            if not line:
+                continue
+            # # Remove "data: "
+            # line = line.decode("utf-8")[6:]
+            line = line[6::] if line.startswith("data: ") else line
+            if line == "[DONE]":
+                break
+            resp: dict = json.loads(line)
+            # print(f'resp: {resp}')
+            choices = resp.get("choices")
+            if not choices:
+                continue
+            delta = choices[0].get("delta")
+            if not delta:
+                continue
+            if "role" in delta:
+                response_role = delta["role"]
+            if "content" in delta:
+                content = delta["content"]
+                full_response += content
+                # print(f'\r{full_response}', end='')
+                yield content
 
 
 class CLI:
+    xmodel = XBaseModel()
 
     @classmethod
     def main(cls, args: BaseArgs):
@@ -276,17 +308,36 @@ class CLI:
             }
 
             try:
-                chatio.prompt_for_output(conv.roles[1])
+                chatio.prompt_for_output(conv.roles[1])  # 打印而已
                 output_stream = generate_stream_func(
-                    model,
-                    tokenizer,
-                    gen_params,
-                    device,
-                    context_len=context_len,
-                    judge_sent_end=judge_sent_end,
-                )
+                        model,
+                        tokenizer,
+                        gen_params,
+                        device,
+                        context_len=context_len,
+                        judge_sent_end=judge_sent_end,
+                    )
                 t = time.time()
-                outputs = chatio.stream_output(output_stream)
+                
+                use_oai_stream = True  # xmodel是xiwu接口
+                
+                if not use_oai_stream:
+                    outputs = chatio.stream_output(output_stream)
+                else:
+                    chatcmpl = OAIAdapter.convert_output_to_oai_format(
+                        output_stream,
+                        model_name=model_path,
+                        stream=True,
+                    )
+                    res = XChatIO.stream_oai_chatcompletions(chatcmpl)
+                    full_response = ""
+                    for x in res:
+                        print(x, end="", flush=True)
+                        full_response += x
+                    print()
+                    outputs = full_response
+
+
                 duration = time.time() - t
                 conv.update_last_message(outputs.strip())
 
@@ -298,7 +349,7 @@ class CLI:
                         "outputs": outputs,
                         "speed (token/s)": round(num_tokens / duration, 2),
                     }
-                    print(f"\n{msg}\n")
+                    print(f"\n{dm.misc.dict2info(msg)}\n")
 
             except KeyboardInterrupt:
                 print("stopped generation.")
@@ -310,3 +361,5 @@ class CLI:
                         conv.messages.pop()
 
                     reload_conv(conv)
+
+    

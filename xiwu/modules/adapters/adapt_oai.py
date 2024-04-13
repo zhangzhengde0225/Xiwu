@@ -1,7 +1,8 @@
 
 import time
 import json
-from xiwu.apis.xiwu_api import ChatLogs
+# from xiwu.apis.xiwu_api import ChatLogs
+from ...utils.chat_logs import ChatLogs
 
 class OAIAdapter:
     chat_logs = ChatLogs()
@@ -126,7 +127,8 @@ class OAIAdapter:
             uid = OAIAdapter.chat_logs.append(
                 chat_completion, 
                 save_immediately=True)
-            # print(f"Saved to chat logs, uid: {uid}")
+            # if cls.args.debug:
+            #     print(f"Saved to chat logs, uid: {uid}"))
 
 
     @classmethod

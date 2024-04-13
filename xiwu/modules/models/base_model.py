@@ -28,7 +28,7 @@ from ..adapters.adapt_oai import OAIAdapter
 
 
 @dataclass
-class XBaseModelArgs(BaseArgs):
+class XBaseModelArgs(BaseArgs):  # 继承了
     pass
 
 
@@ -142,7 +142,31 @@ class XBaseModel:
        
         return model, tokenizer
     
+    def oai_messages2prompt(self, messages) -> str:
+        """这种方法不将信息缓存到conv里，适用于单次对话，多轮需要外部自己维护对话信息"""
+        conv = self.get_conv().copy()
+        for message in messages:
+            role = message["role"]
+            content = message["content"]
+            if role == "system":
+                if content is not None and len(content) > 0:
+                    # conv.system = content
+                    conv.system_message = content
+            elif role == 'user':
+                conv.append_message(conv.roles[0], content)
+            elif role == 'assistant':
+                conv.append_message(conv.roles[1], content)
+            else:
+                raise ValueError(f"Unknown role: {role}, only support 'system', 'user', 'assistant'")
+        conv.append_message(conv.roles[1], None)
+        prompt = conv.get_prompt()
+        del conv
+        return prompt
+    
     def messages2conv(self, messages) -> Conversation:
+        """
+        注意，这种方法是缓存信息到conv里的，适用于后台自动多轮会话
+        """
         conv = self.get_conv()
         # 读取messages中的系统消息
         for message in messages:

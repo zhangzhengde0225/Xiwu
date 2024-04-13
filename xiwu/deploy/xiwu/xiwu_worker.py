@@ -3,10 +3,8 @@ from pathlib import Path
 here = Path(__file__).parent
 
 from typing import Optional
-import hepai
-from hepai import BaseWorkerModel
-from dataclasses import dataclass, field
 
+from dataclasses import dataclass, field
 try:
     from xiwu.version import __version__
 except:
@@ -15,6 +13,8 @@ except:
 from xiwu import YamlConfig, BaseArgs, XBaseModel
 from xiwu.modules.models.xiwu_ import Xiwu
 from xiwu.apis.fastchat_api import Conversation
+import hepai
+from hepai import BaseWorkerModel
 
 class WorkerModel(BaseWorkerModel):
     def __init__(self, args, **kwargs):

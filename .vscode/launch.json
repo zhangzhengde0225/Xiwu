@@ -10,7 +10,9 @@
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
+            "justMyCode": false,
             "args": [
+                // "--debug", "True"
                 // "--controller_address",  "http://127.0.0.1:42901"
             ]
         },

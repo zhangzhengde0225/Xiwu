@@ -5,6 +5,7 @@ from ..modules.adapters.xiwu_adapter import XiwuAdapter
 from ..modules.adapters.vicuna_adapter import VicunaAdapter
 from ..utils.patch_xiwu import patch_xiwu, patch_vicuna
 from ..utils.chat_logs import ChatLogs
+from ..modules.adapters.adapt_oai import OAIAdapter
 
 from ..utils.hepai_llm import HepAILLM
 from ..utils.base_qa_dataset_saver import BaseQADatasetSaver

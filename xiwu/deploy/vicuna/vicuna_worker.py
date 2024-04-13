@@ -12,6 +12,7 @@ except:
     from xiwu.version import __version__
 from xiwu import YamlConfig
 from xiwu.modules.models.vicuna import Vicuna
+from xiwu.modules.serve.cli import XChatIO
 from xiwu import BaseArgs, XBaseModel
 import hepai
 from hepai import BaseWorkerModel
@@ -25,9 +26,21 @@ class WorkerModel(BaseWorkerModel):
     def inference(self, **kwargs):
         # 自己的执行逻辑, 例如: # 
         messages= kwargs.pop('messages', None)
-        conv = self.xmodel.messages2conv(messages)
-        prompt = self.xmodel.get_prompt_by_conv(conv)
+        # conv = self.xmodel.messages2conv(messages)  # 注意，此处多次请求会自动把消息保存到conv中
+        # prompt = self.xmodel.get_prompt_by_conv(conv)
+        prompt = self.xmodel.oai_messages2prompt(messages)
         chatcmpl: dict = self.xmodel.inference(prev_text=prompt, **kwargs)
+        return chatcmpl
+    
+    def chat_completions(self, **kwargs):
+        chatcmpl = self.inference(**kwargs)
+        # if self.xmodel.args.debug:
+        #     res = XChatIO.stream_oai_chatcompletions(chatcmpl)
+        #     full_response = ""
+        #     for x in res:
+        #         print(x, end='', flush=True)
+        #         full_response += x
+        #     print()
         return chatcmpl
 
 # (1) 实现WorkerModel
@@ -43,7 +56,7 @@ class ModelArgs(BaseArgs):
 class WorkerArgs:
     host: str = "0.0.0.0"  # worker的地址，0.0.0.0表示外部可访问，127.0.0.1表示只有本机可访问
     port: str = "auto"  # 默认从42902开始
-    controller_address: str = "http://aiapi.ihep.ac.cn:42901"  # 控制器的地址
+    controller_address: str = "http://127.0.0.1:42901"  # 控制器的地址
     worker_address: str = "auto"  # 默认是http://<ip>:<port>
     limit_model_concurrency: int = 5  # 限制模型的并发请求
     stream_interval: float = 0.  # 额外的流式响应间隔
@@ -65,25 +78,29 @@ def run_worker(**kwargs):
     
     if worker_args.test:
         stream = True
+        question = 'who are you?'
         chatcmpl: dict = model.inference(messages=[
                 {"role": "system", "content": "Answering questions conversationally"},
-                {"role": "user", "content": 'who are you?'},
+                {"role": "user", "content": question},
                 ## 如果有多轮对话，可以继续添加，"role": "assistant", "content": "Hello there! How may I assist you today?"
                 ## 如果有多轮对话，可以继续添加，"role": "user", "content": "I want to buy a car."
             ],
             stream=stream,
             )
+        print(f"Q: {question}")
         if not stream:
             choice = chatcmpl["choices"][0]
             response = choice["message"]["content"]
             print(response)
         else:
-            for chunk in chatcmpl:
-                choice = chunk["choices"][0]
-                delta = choice['delta']['content']
-                print(delta, end='', flush=True)
-            pass
-        #return
+            print("A: ", end='')
+            res = XChatIO.stream_oai_chatcompletions(chatcmpl)
+            full_response = ""
+            for x in res:
+                print(x, end='', flush=True)
+                full_response += x
+            print()
+            
 
     hepai.worker.start(model=model, worker_args=worker_args, **kwargs)
 

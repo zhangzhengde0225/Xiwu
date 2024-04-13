@@ -17,6 +17,9 @@ client = HepAI(
     api_key=os.getenv("HEPAI_A100_API_KEY"),
     # base_url="http://localhost:4280/v1",
     base_url="http://127.0.0.1:21601/v1",
+    timeout=36000,
+    max_retries=1,
+
 )
  
 # 上传和解析文件
@@ -50,7 +53,8 @@ messages=[
     # },
     # {"role": "user", "content": "总结一下这篇论文"},
     # {"role": "user", "content": "帮我写一个快速排序代码"},
-    {"role": "user", "content": "who are you?"},
+    # {"role": "user", "content": "who are you?"},
+    {"role": "user", "content": "Write a quick sort code for me"},
 ]
  
 stream = True
