@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import os, sys
 from pathlib import Path
 here = Path(__file__).parent
