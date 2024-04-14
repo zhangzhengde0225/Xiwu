@@ -9,6 +9,7 @@ import os
 
 REPO_PATH = os.path.dirname(os.path.dirname(__file__))
 PRETRAINED_WEIGHTS_DIR = os.getenv("PRETRAINED_WEIGHTS_DIR", f"/data/zzd/weights")
+DATASETS_DIR = os.getenv("DATASETS_DIR", f"/data/zzd/datasets")
 
 
 ##### For the gradio web server
