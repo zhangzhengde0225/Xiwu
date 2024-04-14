@@ -38,7 +38,7 @@ def download(model_name, output_dir=None):
 
 @dataclass
 class Args:
-    model: str = field(default="decapoda-research/llama-7b-hf", metadata={"help": "The model name to download."})
+    model: str = field(default="lmsys/vicuna-13b-v1.5-16k", metadata={"help": "The model name to download."})
     save_dir: str = field(default=PRETRAINED_WEIGHTS_DIR, metadata={"help": "The directory to save the downloaded weights."})
     size: str = field(default=None, metadata={"help": "The size of the model."})
 
