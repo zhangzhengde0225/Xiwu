@@ -1,7 +1,7 @@
 
 numpy
 transformers>=4.39.3
-saccelerate>=0.29.2
+accelerate>=0.29.2
 torch>=2.1.0
 psutil>=5.9.8
 hepai>=1.1.3
@@ -14,5 +14,5 @@ anthropic>=0.25.1
 
 SentencePiece>=0.2.0 
 
-
+# packaging>=24.0  # for training
 # fash-attn>=2.5.7  # for training

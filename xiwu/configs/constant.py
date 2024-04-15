@@ -7,9 +7,11 @@ Global constants.
 from enum import IntEnum
 import os
 
+USERNAME = os.getlogin()
+
 REPO_PATH = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
-PRETRAINED_WEIGHTS_DIR = os.getenv("PRETRAINED_WEIGHTS_DIR", f"/data/zzd/weights")
-DATASETS_DIR = os.getenv("DATASETS_DIR", f"/data/zzd/datasets")
+PRETRAINED_WEIGHTS_DIR = os.getenv("PRETRAINED_WEIGHTS_DIR", f"/data/{USERNAME}/weights")
+DATASETS_DIR = os.getenv("DATASETS_DIR", f"/data/{USERNAME}/datasets")
 RUNS_DIR = os.getenv("RUNS_DIR", f"{REPO_PATH}/runs")
 
 ##### For the gradio web server

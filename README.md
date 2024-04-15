@@ -17,7 +17,7 @@ https://github.com/zhangzhengde0225/Xiwu/archive/refs/heads/main.zip)
   </p>
 </div>
 
-This is the offitial implemention of **Xiwu(溪悟): a basis flexible and learnable Large Language Model (LLM) for High Energy Physics (HEP)**. This model is designed to possess exceptional capabilities in common sense answering, BOSS code generation, and physical logical reasoning.
+This is the offitial implemention of [Xiwu(溪悟): A Basis Flexible and Learnable LLM for High Energy Physics](https://arxiv.org/abs/2404.08001). This model is designed to possess exceptional capabilities in common sense answering, BOSS code generation, and physical logical reasoning.
 
 Xi(溪): stremlet → drops of water, Wu(悟): understand and gaining insight
 

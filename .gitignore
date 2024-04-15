@@ -13,6 +13,9 @@ data/*
 xiwu/scripts/*.txt
 xiwu/data/seed_fission/generated_data/*
 
+./xiwu/__pycache__/*
+./xiwu/apis/__pycache__/*
+
 .vscode
 
 # .vscode
