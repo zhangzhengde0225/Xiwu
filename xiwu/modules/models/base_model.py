@@ -129,7 +129,7 @@ class XBaseModel:
                     groupsize=args.gptq_groupsize,
                     act_order=args.gptq_act_order,
                 ),
-                awq_config=AWQConfig(
+            awq_config=AWQConfig(
                     ckpt=args.awq_ckpt or args.model_path,
                     wbits=args.awq_wbits,
                     groupsize=args.awq_groupsize,

@@ -11,7 +11,6 @@ REPO_PATH = os.path.dirname(os.path.dirname(__file__))
 PRETRAINED_WEIGHTS_DIR = os.getenv("PRETRAINED_WEIGHTS_DIR", f"/data/zzd/weights")
 DATASETS_DIR = os.getenv("DATASETS_DIR", f"/data/zzd/datasets")
 
-
 ##### For the gradio web server
 SERVER_ERROR_MSG = (
     "**NETWORK ERROR DUE TO HIGH TRAFFIC. PLEASE REGENERATE OR REFRESH THIS PAGE.**"

@@ -49,7 +49,6 @@ class WorkerArgs:
     stream_interval: float = 0.  # 额外的流式响应间隔
     no_register: bool = False  # 不注册到控制器
     permissions: str = 'groups:all,PAYG,zc3900; owner: hepai@ihep.ac.cn'
-    #permissions: str = 'groups: hepai;users: zdzhang@ihep.ac.cn,yaohd@ihep.ac.cn,siyangchen@ihep.ac.cn'  # 模型的权限授予，分为用户和组，用;分隔，例如：需要授权给所有组、a用户、b用户：'groups: all; users: a, b; owner: c'
     description: str = 'Xiwu from HepAI'  # 模型的描述
     author: str = 'hepai'  # 模型的作者
     test: bool = True  # 测试模式，不会真正启动worker，只会打印参数

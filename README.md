@@ -8,7 +8,7 @@ https://github.com/zhangzhengde0225/Xiwu/archive/refs/heads/main.zip)
 
 #### English | [简体中文](https://github.com/zhangzhengde0225/Xiwu/blob/main/docs/README_zh_cn.md)
 
-# Xiwu
+# Xiwu LLM
 
 <div align="center">
   <p>
@@ -17,7 +17,7 @@ https://github.com/zhangzhengde0225/Xiwu/archive/refs/heads/main.zip)
   </p>
 </div>
 
-The **HEP·Xiwu(溪悟)** a basis flexible and learnable Large Language Model (LLM) tailored for High Energy Physics (HEP) research field. This model is designed to possess exceptional capabilities in **common sense answering**, **BOSS code generation**, and **physical logical reasoning**.
+This is the offitial implemention of **Xiwu(溪悟): a basis flexible and learnable Large Language Model (LLM) for High Energy Physics (HEP)**. This model is designed to possess exceptional capabilities in common sense answering, BOSS code generation, and physical logical reasoning.
 
 Xi(溪): stremlet → drops of water, Wu(悟): understand and gaining insight
 
@@ -29,21 +29,27 @@ Xi(溪): stremlet → drops of water, Wu(悟): understand and gaining insight
 
 # Quick Start
 
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+You can see the basic configurations in the [basic_config.py](xiwu/configs/basic_config.py) and [constant.py](xiwu/configs/constant.py) files.
+
 ## Deploy
 + CLI Demo  
 ```bash 
-bash scripts/run_xiwu_cli.sh
+python run_xiwu_cli.py \
+  --model_path xiwu/xiwu-13b-20230509 \
+  --load_8bit False 
 ```
-+ Deploy worker
+For more available arguments, you can run `python run_xiwu_cli.py -h`.
+
++ Deploy worker to a server
+You should run a controller befor you run the worker.
 ```bash
 bash scripts/deploy_xiwu_worker.sh
 ```
-The worker serves as the backend of the webui, and you can access the worker through the API.
-+ Deploy webui
-```bash
-bash scripts/deploy_webui.sh
-```
-The webui is the front end of the system, and you can access the webui through the browser.
 
 ### Trained Weights
 
