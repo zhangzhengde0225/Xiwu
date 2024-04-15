@@ -17,3 +17,4 @@ class XBaseModelAdapter(BaseModelAdapter):
         return super().load_model(model_path, from_pretrained_kwargs)
 
     
+    

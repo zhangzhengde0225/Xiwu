@@ -23,7 +23,7 @@ from xiwu.apis.fastchat_api import (
     GptqConfig, AWQConfig, ExllamaConfig, XftConfig
 )
 from xiwu import CONST, ASSEMBLER
-from xiwu.configs.basic_config import BaseArgs
+from xiwu.configs.configs import BaseArgs
 from ..adapters.adapt_oai import OAIAdapter
 
 

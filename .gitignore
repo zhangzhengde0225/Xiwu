@@ -1,5 +1,6 @@
 
-
+runs/*
+wandb/*
 xiwu/repos/FastChat_back
 xiwu/scripts/wandb/*
 xiwu/data/seed_fission/*.tar.gz

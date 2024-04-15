@@ -6,7 +6,7 @@ import warnings
 import math
 import psutil
 from functools import cache
-from transformers import AutoModelForCausalLM, AutoTokenizer
+from transformers import AutoModelForCausalLM, AutoTokenizer, AutoConfig
 
 import torch
 from xiwu import CONST
@@ -75,6 +75,8 @@ class XAssembler():
     def get_conversation_template(self, model_path: str) -> Conversation:
         adapter = self.get_model_adapter(model_path)
         return adapter.get_default_conv_template(model_path)
+
+
 
     def load_model(self,
         model_path: str,
@@ -275,5 +277,44 @@ class XAssembler():
         return model, tokenizer
     
 
+    def adapt_local_path(self, model_path):
+        if os.path.exists(f'{CONST.PRETRAINED_WEIGHTS_DIR}/{model_path}'):
+            model_path = f'{CONST.PRETRAINED_WEIGHTS_DIR}/{model_path}'
+        return model_path
+
+    def load_config_from_pretrained(self, pretrained_model_name_or_path, **kwargs):
+        """
+        Load a configuration object from a pretrained model for training.
+        """
+        model_path = self.adapt_local_path(pretrained_model_name_or_path)
+        config = AutoConfig.from_pretrained(
+            model_path,
+            **kwargs
+        )
+        return config
+    
+    def load_model_from_pretrained(self, pretrained_model_name_or_path, *model_args, **kwargs):
+        """
+        Load a model from a pretrained model for training.
+        """
+        model_path = self.adapt_local_path(pretrained_model_name_or_path)
+        model = AutoModelForCausalLM.from_pretrained(
+            model_path,
+            *model_args,
+            **kwargs
+        )
+        return model
+    
+    def load_tokenizer_from_pretrained(self, pretrained_model_name_or_path, *inputs, **kwargs):
+        """
+        Load a tokenizer from a pretrained model for training.
+        """
+        model_path = self.adapt_local_path(pretrained_model_name_or_path)
+        tokenizer = AutoTokenizer.from_pretrained(
+            model_path,
+            *inputs,
+            **kwargs
+        )
+        return tokenizer
 
 

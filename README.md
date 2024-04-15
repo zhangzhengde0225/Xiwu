@@ -8,7 +8,7 @@ https://github.com/zhangzhengde0225/Xiwu/archive/refs/heads/main.zip)
 
 #### English | [简体中文](https://github.com/zhangzhengde0225/Xiwu/blob/main/docs/README_zh_cn.md)
 
-# Xiwu LLM
+# HEP·Xiwu LLM
 
 <div align="center">
   <p>
@@ -48,7 +48,7 @@ For more available arguments, you can run `python run_xiwu_cli.py -h`.
 + Deploy worker to a server
 You should run a controller befor you run the worker.
 ```bash
-bash scripts/deploy_xiwu_worker.sh
+python run_xiwu_worker.py
 ```
 
 ### Trained Weights
@@ -84,6 +84,18 @@ No. CAS-WX2022SF-0104 and "From 0 to 1" Original Innovation Project of IHEP, Gra
 We would like to express our gratitude to Beijiang Liu, Yaquan Fang, Gang Li, Wuming Luo, Ye Yuan, Shengsen Sun, Yi Jiao and others who are not listed here for engaging in beneficial discussions or providing computing resources.
 
 We are very grateful to the [LLaMA](https://github.com/meta-llama/llama), [FastChat](https://github.com/lm-sys/FastChat) projects for the foundation models.
+
+# Citation
+```
+@misc{zhang2024xiwu,
+      title={Xiwu: A Basis Flexible and Learnable LLM for High Energy Physics}, 
+      author={Zhengde Zhang and Yiyu Zhang and Haodong Yao and Jianwen Luo and Rui Zhao and Bo Huang and Jiameng Zhao and Yipu Liao and Ke Li and Lina Zhao and Jun Cao and Fazhi Qi and Changzheng Yuan},
+      year={2024},
+      eprint={2404.08001},
+      archivePrefix={arXiv},
+      primaryClass={hep-ph}
+}
+```
 
 # License
 

@@ -1,6 +1,8 @@
 
+import transformers
 from typing import Optional, List
 from dataclasses import dataclass, field
+from .constant import RUNS_DIR, DATASETS_DIR
 
 
 @dataclass
@@ -59,3 +61,26 @@ class BaseArgs:
     xft_max_seq_len: int = field(default=4096, metadata={"help": "Used for xFasterTransformer. Max sequence length to use for xFasterTransformer framework; default 4096 sequence length."})
     xft_dtype: Optional[str] = field(default=None, metadata={"help": "Override the default dtype. If not set, it will use bfloat16 for first token and float16 next tokens on CPU.", "choices": ["fp16", "bf16", "int8", "bf16_fp16", "bf16_int8"]})
     
+    
+@dataclass
+class ModelArgs:
+    model_name_or_path: Optional[str] = field(default="lmsys/vicuna-13b-v1.5-16k")
+    trust_remote_code: bool = field(default=False, metadata={"help": "Whether or not to allow for custom models defined on the Hub in their own modeling files"},)
+    padding_side: str = field(default="right", metadata={"help": "The padding side in tokenizer"})
+
+
+@dataclass
+class DataArgs:
+    data_path: str = field(default=f'{DATASETS_DIR}/raw_data/xiwu-dummy.json', metadata={"help": "Path to the training data."})
+    eval_data_path: str = field(default=None, metadata={"help": "Path to the evaluation data."})
+    lazy_preprocess: bool = False
+
+@dataclass
+class TrainingArgs(transformers.TrainingArguments):
+    cache_dir: Optional[str] = field(default=None)
+    optim: str = field(default="adamw_torch")
+    model_max_length: int = field(default=512, metadata={"help": "Maximum sequence length. Sequences will be right padded (and possibly truncated)."},)
+    output_dir: str = field(default=RUNS_DIR, metadata={"help": "The output directory where the model predictions and checkpoints will be written."})
+
+
+

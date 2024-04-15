@@ -2,7 +2,18 @@ import os, sys
 from pathlib import Path
 here = Path(__file__).parent
 
-sys.path.insert(1, f'{here.parent}/repos/FastChat')
+try:
+    from fastchat import __version__
+except:
+    fastchat_path = f'{here.parent}/repos/FastChat'
+    sys.path.insert(1, fastchat_path)
+    from fastchat import __version__
+    print(f'fastchat not installed, use local in `{fastchat_path}` with version {__version__}')
+
+from fastchat.train.llama2_flash_attn_monkey_patch import (
+    replace_llama_attn_with_flash_attn,
+)
+
 
 from ..repos.FastChat.fastchat.serve.inference import (
     load_model, generate_stream, get_conv_template, get_conversation_template,
@@ -77,4 +88,9 @@ from ..repos.FastChat.fastchat.utils import (
 
 from ..repos.FastChat.fastchat.model.monkey_patch_non_inplace import (
     replace_llama_attn_with_non_inplace_operations
+)
+
+from fastchat.train.train import (
+    make_supervised_data_module,
+    trainer_save_model_safe,
 )
