@@ -15,27 +15,27 @@ from fastchat.train.llama2_flash_attn_monkey_patch import (
 )
 
 
-from ..repos.FastChat.fastchat.serve.inference import (
+from fastchat.serve.inference import (
     load_model, generate_stream, get_conv_template, get_conversation_template,
     get_context_length, get_generate_stream_function, ChatIO
     )
 
-from ..repos.FastChat.fastchat.conversation import (
+from fastchat.conversation import (
     conv_templates, Conversation, SeparatorStyle,
     register_conv_template,   
 )
-from ..repos.FastChat.fastchat.serve.cli import (
+from fastchat.serve.cli import (
     SimpleChatIO, RichChatIO, ProgrammaticChatIO,
     add_model_args,
     main,
 )
 
 
-from ..repos.FastChat.fastchat.llm_judge.gen_api_answer import(
+from fastchat.llm_judge.gen_api_answer import(
     get_answer, reorg_answer_file,
 )
 
-from ..repos.FastChat.fastchat.llm_judge.common import (
+from fastchat.llm_judge.common import (
     load_questions,
     temperature_config,
     # chat_compeletion_openai,
@@ -56,7 +56,7 @@ from ..repos.FastChat.fastchat.llm_judge.common import (
     NEED_REF_CATS,
 )
 
-from ..repos.FastChat.fastchat.llm_judge.gen_judgment import (
+from fastchat.llm_judge.gen_judgment import (
     make_match_single,
     make_judge_single,
     make_judge_pairwise,
@@ -64,7 +64,7 @@ from ..repos.FastChat.fastchat.llm_judge.gen_judgment import (
     make_match,
 )
 
-from ..repos.FastChat.fastchat.model.model_adapter import (
+from fastchat.model.model_adapter import (
     get_conversation_template,
     BaseModelAdapter,
     register_model_adapter,
@@ -72,13 +72,13 @@ from ..repos.FastChat.fastchat.model.model_adapter import (
     raise_warning_for_incompatible_cpu_offloading_configuration,
 )
 
-from ..repos.FastChat.fastchat.modules.awq import AWQConfig, load_awq_quantized
-from ..repos.FastChat.fastchat.modules.gptq import GptqConfig, load_gptq_quantized
-from ..repos.FastChat.fastchat.modules.exllama import ExllamaConfig, load_exllama_model
-from ..repos.FastChat.fastchat.modules.xfastertransformer import XftConfig, load_xft_model
+from fastchat.modules.awq import AWQConfig, load_awq_quantized
+from fastchat.modules.gptq import GptqConfig, load_gptq_quantized
+from fastchat.modules.exllama import ExllamaConfig, load_exllama_model
+from fastchat.modules.xfastertransformer import XftConfig, load_xft_model
 
 
-from ..repos.FastChat.fastchat.utils import (
+from fastchat.utils import (
     get_gpu_memory,
     oai_moderation,
     moderation_filter,
@@ -86,11 +86,15 @@ from ..repos.FastChat.fastchat.utils import (
     str_to_torch_dtype,
 )
 
-from ..repos.FastChat.fastchat.model.monkey_patch_non_inplace import (
+from fastchat.model.monkey_patch_non_inplace import (
     replace_llama_attn_with_non_inplace_operations
 )
 
 from fastchat.train.train import (
     make_supervised_data_module,
     trainer_save_model_safe,
+    LazySupervisedDataset,
+    SupervisedDataset,
+    rank0_print,
+    preprocess,
 )

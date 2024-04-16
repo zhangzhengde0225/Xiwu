@@ -76,8 +76,6 @@ class XAssembler():
         adapter = self.get_model_adapter(model_path)
         return adapter.get_default_conv_template(model_path)
 
-
-
     def load_model(self,
         model_path: str,
         device: str = "cuda",

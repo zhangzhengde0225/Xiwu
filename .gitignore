@@ -1,4 +1,5 @@
 
+nohup.out*
 ./runs
 ./wandb
 runs/*
@@ -6,10 +7,11 @@ wandb/*
 xiwu/repos/FastChat_back
 xiwu/scripts/wandb/*
 xiwu/data/seed_fission/*.tar.gz
-*nohup.out*
-xiwu/data/seed_fission/nohut.out*
-xiwu/data/seed_fission/nohup.out*
-xiwu/data/seed_fission/error*
+*/nohup.out*
+xiwu/data/data_acquisition_tools/seed_fission/*.tar.gz
+xiwu/data/data_acquisition_tools/seed_fission/nohut.out*
+xiwu/data/data_acquisition_tools/seed_fission/nohup.out*
+xiwu/data/data_acquisition_tools/seed_fission/error*
 
 data/*
 xiwu/scripts/*.txt

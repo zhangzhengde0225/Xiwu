@@ -16,6 +16,25 @@
                 // "--controller_address",  "http://127.0.0.1:42901"
             ]
         },
-        
+        {
+            "name": "Python: torchrun",
+            "type": "debugpy",
+            "request": "launch",
+            // "program": "${workspaceFolder}/your_script.py",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "-m",
+                "torch.distributed.launch",
+                "--nproc_per_node=4",
+                "--nnodes=1",
+                "--node_rank=0",
+                "--master_addr=localhost",
+                "--master_port=12345",
+                "${workspaceFolder}/your_script.py"
+            ],
+            // "pythonPath": "${command:python.interpreterPath}"
+        }
     ]
 }

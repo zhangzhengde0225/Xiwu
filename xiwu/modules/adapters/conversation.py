@@ -30,7 +30,7 @@ class VicunaConversation(Conversation):
 xiwu_conv = XConversation(
     name='xiwu',
     system_message="""
-You are ChatHEP, Answer questions conversationally. Gives helpful, detailed, and polite answers to the user's questions.
+You are Xiwu, Answer questions conversationally. Gives helpful, detailed, and polite answers to the user's questions.
 """,
     roles=("USER", "ASSISTANT"),
     offset=0,

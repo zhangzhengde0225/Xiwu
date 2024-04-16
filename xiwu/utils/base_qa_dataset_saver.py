@@ -62,7 +62,6 @@ class BaseQADatasetSaver(object):
         self._register_auto_save(save_before_exit=save_before_exit, save_every_minutes=save_every_minutes)
         print(f'File in use: {self.file_path}')
 
-
     def _register_auto_save(self, **kwargs):
         save_before_exit = kwargs.pop('save_before_exit', True)
         save_every_minutes = kwargs.pop('save_every_minutes', 10)
@@ -74,8 +73,6 @@ class BaseQADatasetSaver(object):
     def _load_data(self, **kwargs):
         file_path = self.file_path
         metadata = kwargs.pop('metadata', None)
-        if metadata is None:
-            metadata = {'description': 'data formated by DataFormater'}
         version = kwargs.pop('version', '1.0')
         initialize = kwargs.pop('initialize', False)
         if initialize and os.path.exists(file_path):
@@ -88,6 +85,8 @@ class BaseQADatasetSaver(object):
             
             data_dict = dict()
             data_dict['version'] = version
+            if metadata is None:
+                metadata = {'description': 'data formated by DataFormater'}
             data_dict['metadata'] = metadata
             if metadata is not None:
                 data_dict['metadata'].update(metadata)
@@ -102,6 +101,10 @@ class BaseQADatasetSaver(object):
             if version is not None:
                 data_dict['version'] = version
         return data_dict
+
+    @classmethod
+    def load_from_file(cls, file_path, **kwargs):
+        return cls(file_path=file_path, **kwargs)
     
     def update_metadata(self, **kwargs):
         data = self.data
@@ -151,6 +154,9 @@ class BaseQADatasetSaver(object):
         self._save_data2file(json_data, **kwargs)
 
     def save(self, json_data=None, **kwargs):
+        self._save_data2file(json_data, **kwargs)
+
+    def save_to_file(self, json_data=None, **kwargs):
         self._save_data2file(json_data, **kwargs)
 
     def _compeletion(self, new_entities):

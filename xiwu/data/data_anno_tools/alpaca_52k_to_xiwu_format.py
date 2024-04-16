@@ -4,8 +4,6 @@
 
 import os, sys
 from pathlib import Path
-import json
-import ast
 from dataclasses import dataclass, field
 here = Path(__file__).parent
 
@@ -26,11 +24,11 @@ class Alpaca2XiwuQA(BaseQADatasetSaver):
 
     def __init__(self, file_path=None, **kwargs):
         version = '1.0'
-        meta_data = {'description': 'Data from alpaca_52k'}
+        metadata = {'description': 'Data from alpaca_52k'}
         super().__init__(
             file_path=file_path, 
             version=version,
-            meta_data=meta_data,
+            metadata=metadata,
             **kwargs)
     
     def _conversation2qas(self, conversations):

@@ -1,8 +1,13 @@
 
-import transformers
+
 from typing import Optional, List
+import os, sys
+from pathlib import Path
 from dataclasses import dataclass, field
 from .constant import RUNS_DIR, DATASETS_DIR
+import transformers
+
+here = Path(__file__).parent
 
 
 @dataclass
@@ -64,23 +69,25 @@ class BaseArgs:
     
 @dataclass
 class ModelArgs:
-    model_name_or_path: Optional[str] = field(default="lmsys/vicuna-13b-v1.5-16k")
+    model_name_or_path: Optional[str] = field(default="lmsys/vicuna-7b-v1.5-16k")
     trust_remote_code: bool = field(default=False, metadata={"help": "Whether or not to allow for custom models defined on the Hub in their own modeling files"},)
     padding_side: str = field(default="right", metadata={"help": "The padding side in tokenizer"})
 
 
 @dataclass
 class DataArgs:
-    data_path: str = field(default=f'{DATASETS_DIR}/raw_data/xiwu-dummy.json', metadata={"help": "Path to the training data."})
+    data_path: str = field(default=f'{DATASETS_DIR}/hep_text_v1.0', metadata={"help": "Path to the training data."})
     eval_data_path: str = field(default=None, metadata={"help": "Path to the evaluation data."})
-    lazy_preprocess: bool = False
+    lazy_preprocess: bool = True
 
 @dataclass
 class TrainingArgs(transformers.TrainingArguments):
     cache_dir: Optional[str] = field(default=None)
     optim: str = field(default="adamw_torch")
-    model_max_length: int = field(default=512, metadata={"help": "Maximum sequence length. Sequences will be right padded (and possibly truncated)."},)
+    model_max_length: int = field(default=576, metadata={"help": "Maximum sequence length. Sequences will be right padded (and possibly truncated)."},)
     output_dir: str = field(default=RUNS_DIR, metadata={"help": "The output directory where the model predictions and checkpoints will be written."})
+    # fsdp: str = "full_shard auto_wrap offload"
+    # fsdp_config: str = f"{here}/fsdp_config.json"
 
 
 
