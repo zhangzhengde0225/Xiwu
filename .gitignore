@@ -1,4 +1,6 @@
 
+./runs
+./wandb
 runs/*
 wandb/*
 xiwu/repos/FastChat_back
