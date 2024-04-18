@@ -8,7 +8,7 @@ https://github.com/zhangzhengde0225/Xiwu/archive/refs/heads/main.zip)
 
 #### English | [简体中文](https://github.com/zhangzhengde0225/Xiwu/blob/main/docs/README_zh_cn.md)
 
-# <p><img width="8%" src="/assets/xiwu.png" alt="xiwu logo"> HEP·Xiwu LLM </p>
+# <p><img src="/assets/xiwu.png" alt="xiwu logo" style="width: 10%; max-width: 40px;"> HEP·Xiwu LLM </p>
 
 <div align="center">
   <p>
