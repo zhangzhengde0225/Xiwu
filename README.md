@@ -1,4 +1,3 @@
-
 [![Stars](https://img.shields.io/github/stars/zhangzhengde0225/Xiwu)](
 https://github.com/zhangzhengde0225/Xiwu)
 [![Open issue](https://img.shields.io/github/issues/zhangzhengde0225/Xiwu)](
@@ -8,7 +7,7 @@ https://github.com/zhangzhengde0225/Xiwu/archive/refs/heads/main.zip)
 
 #### English | [简体中文](https://github.com/zhangzhengde0225/Xiwu/blob/main/docs/README_zh_cn.md)
 
-<h1><img src="/assets/xiwu.png" alt="xiwu logo" style="heigh: 10%; max-width: 30px"> HEP·Xiwu LLM </h1>
+<h1><img src="/assets/xiwu.png" alt="xiwu logo" style="height: 10%; max-width: 30px"> HEP·Xiwu LLM </h1>
 
 <div align="center">
   <p>
