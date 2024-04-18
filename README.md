@@ -17,7 +17,7 @@ https://github.com/zhangzhengde0225/Xiwu/archive/refs/heads/main.zip)
   </p>
 </div>
 
-This is the offitial implemention of [Xiwu(溪悟): A Basis Flexible and Learnable LLM for High Energy Physics](https://arxiv.org/abs/2404.08001). This model is designed to possess exceptional capabilities in common sense answering, BOSS code generation, and physical logical reasoning.
+This is the first LLM for HEP, an offitial implemention of [Xiwu(溪悟): A Basis Flexible and Learnable LLM for High Energy Physics](https://arxiv.org/abs/2404.08001). This model is designed to possess exceptional capabilities in common sense answering, BOSS code generation, and physical logical reasoning.
 
 Xi(溪): stremlet → drops of water, Wu(悟): understand and gaining insight
 
@@ -34,7 +34,7 @@ Xi(溪): stremlet → drops of water, Wu(悟): understand and gaining insight
 ```bash
 pip install -r requirements.txt
 ```
-You can see the basic configurations in the [basic_config.py](xiwu/configs/basic_config.py) and [constant.py](xiwu/configs/constant.py) files.
+You can see the basic configurations in the [configs.py](xiwu/configs/configs.py) and [constant.py](xiwu/configs/constant.py) files.
 
 ## Deploy
 + CLI Demo  
@@ -73,7 +73,7 @@ bash scripts/train_xiwu.sh
 
 # Contributors
 
-Xiwu is authored by Zhengde Zhang, Yiyu Zhang, Haodong Yao, Jianwen Luo, Rui Zhao, Bo Huang, Jiameng Zhao, Yipu Liao, Ke Li, Lina Zhao, Jun Cao, Fazhi Qi and Changzheng Yuan. 
+Xiwu is authored by Zhengde Zhang, Yiyu Zhang, Haodong Yao, Jianwen Luo, Rui Zhao, Bo Huang, Jiameng Zhao, Yipu Liao, Ke Li, Lina Zhao, Fazhi Qi and Changzheng Yuan. 
 
 Currently, it is maintained by Zhengde Zhang (zdzhang@ihep.ac.cn).
 
@@ -89,7 +89,7 @@ We are very grateful to the [LLaMA](https://github.com/meta-llama/llama), [FastC
 ```
 @misc{zhang2024xiwu,
       title={Xiwu: A Basis Flexible and Learnable LLM for High Energy Physics}, 
-      author={Zhengde Zhang and Yiyu Zhang and Haodong Yao and Jianwen Luo and Rui Zhao and Bo Huang and Jiameng Zhao and Yipu Liao and Ke Li and Lina Zhao and Jun Cao and Fazhi Qi and Changzheng Yuan},
+      author={Zhengde Zhang and Yiyu Zhang and Haodong Yao and Jianwen Luo and Rui Zhao and Bo Huang and Jiameng Zhao and Yipu Liao and Ke Li and Lina Zhao and Fazhi Qi and Changzheng Yuan},
       year={2024},
       eprint={2404.08001},
       archivePrefix={arXiv},

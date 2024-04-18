@@ -1,10 +1,11 @@
 torchrun --nproc_per_node=4 --master_port=20001 xiwu/train/fine_tuning/train_mem.py \
     --model_name_or_path lmsys/vicuna-13b-v1.5-16k \
+    --data_path /data/zdzhang/datasets/hep_text_v1.0 \
     --bf16 True \
-    --num_train_epochs 3 \
-    --per_device_train_batch_size 24 \
-    --per_device_eval_batch_size 24 \
-    --gradient_accumulation_steps 24 \
+    --num_train_epochs 2 \
+    --per_device_train_batch_size 4 \
+    --per_device_eval_batch_size 4 \
+    --gradient_accumulation_steps 16 \
     --evaluation_strategy "no" \
     --save_strategy "steps" \
     --save_steps 1200 \
