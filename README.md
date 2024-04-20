@@ -20,9 +20,6 @@ This is the first LLM for HEP, an offitial implemention of [Xiwu(溪悟): A Basi
 
 Xi(溪): stremlet → drops of water, Wu(悟): understand and gaining insight
 
-# Updates
-
-+ 2024.04.20 Adapt LLaMA-3 inference.
 
 # Features
 
