@@ -55,7 +55,7 @@ python run_cli.py \
 You and switch to any supported model. For more available arguments, you can run `python run_cli.py -h`.
 The assembler will automatically search the model in the `PRETRAINED_WEIGHTS_DIR` directory.
 
-### Deploy worker to host a API server.
+### Deploy worker to host an API server.
 You should run a controller befor you run the worker.
 ```bash
 python run_worker.py \
