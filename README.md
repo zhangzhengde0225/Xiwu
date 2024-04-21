@@ -36,6 +36,15 @@ pip install -r requirements.txt
 ```
 You can see the basic configurations in the [configs.py](xiwu/configs/configs.py) and [constant.py](xiwu/configs/constant.py) files.
 
+### Prepare trained Weights
+
+By default, the model weights will be stored in the `/data/<USERNAME>/weights` directory, you set the `PRETRAINED_WEIGHTS_DIR` cont in the [constant.py](xiwu/configs/constant.py) file or the `PRETRAINED_WEIGHTS_DIR` environment variable to change the default directory.
+
+You can run `./prepare_weights.sh --list_all` to see all available weights, and run the following command to download the trained weights:
+```bash
+./prepare_weights.sh --model lmsys/vicuna-7b-v1.5 
+```
+
 ## Deploy
 #### CLI (Command Line Interface)  
 ```bash 
@@ -44,8 +53,9 @@ python run_cli.py \
   --load_8bit False 
 ```
 You and switch to any supported model. For more available arguments, you can run `python run_cli.py -h`.
+The assembler will automatically search the model in the `PRETRAINED_WEIGHTS_DIR` directory.
 
-### Deploy worker to get API.
+### Deploy worker to host a API server.
 You should run a controller befor you run the worker.
 ```bash
 python run_worker.py \
@@ -53,9 +63,7 @@ python run_worker.py \
 ```
 For more available arguments, you can run `python run_worker.py -h`.
 
-### Trained Weights
 
-Refer to the [models](docs/models.md) for the trained weights.
 
 ## Train on Custom Data
 
