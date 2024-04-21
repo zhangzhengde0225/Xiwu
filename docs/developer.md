@@ -25,4 +25,22 @@ Xiwu项目支持不同模型的统一接入，可通过命令行、API和Web三�
 ··· │   │   ├── deployer - 部署器模块
 ··· │   ├── repos - 其他项目的代码仓库
 ··· │   ├── utils - 通用工具函数
+··· │──────
 ```
+
+
+## 2.提示词格式
+
+提示词格式由`BaseConversation`来处理，不同的模型格式会不同，需要定制适配。
+包含属性：name, system_message, roles, offset, sep_style, stop_str, stop_token_ids
+
+Vicuan格式：
+```bash
+<SYSTEM_MESSAGE><SEP0><ROLE0>: <Q1><SEP0><ROLE1>: <A1><SEP1><>
+<系统提示><一个空格>[<USER>: <问题1><一个空格><ASSISTANT>: <回答1></s>][<USER>: <问题2><一个空格><ASSISTANT>:]
+例如：
+"\nYou are Vicuna, Answer questions conversationally. Gives helpful, detailed, and polite answers to the user's questions.\n USER: Hello ASSISTANT: Hello there! How may I assist you today?</s>USER: who are you ASSISTANT:"
+```
+分隔符seps为空格`" "`和`"</s>"`,
+角色roles为`USER`和`ASSISTANT`，
+

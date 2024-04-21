@@ -11,7 +11,7 @@ except:
     from xiwu.version import __version__
 from xiwu.apis.fastchat_api import main
 from xiwu import BaseArgs
-from xiwu.modules.serve.cli import CLI
+from xiwu.modules.deployer.cli import CLI
 import hepai
 
 @dataclass

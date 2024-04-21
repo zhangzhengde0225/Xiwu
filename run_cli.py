@@ -1,6 +1,11 @@
 #!/home/zdzhang/.conda/envs/xiwu/bin/python
 # -*- coding: utf-8 -*-
 
+"""
+This is command line interface (CLI) for all models
+"""
+
+
 from typing import Optional, List
 import os, sys
 from pathlib import Path
@@ -14,7 +19,7 @@ except:
     from xiwu.version import __version__
 from xiwu.apis.fastchat_api import main
 from xiwu.configs import BaseArgs
-from xiwu.modules.serve.cli import CLI
+from xiwu.modules.deployer.cli import CLI
 import hepai
 
 @dataclass
@@ -24,8 +29,9 @@ class ModelArgs(BaseArgs):
     
 if __name__ == "__main__":
     args = hepai.parse_args(ModelArgs)
+    args.model_path = 'lmsys/vicuna-7b'
     print(args)
     # main(args)
-    
+
     CLI.main(args)
     

@@ -98,3 +98,10 @@ from fastchat.train.train import (
     rank0_print,
     preprocess,
 )
+
+from fastchat.model.model_chatglm import generate_stream_chatglm
+from fastchat.model.model_codet5p import generate_stream_codet5p
+from fastchat.model.model_falcon import generate_stream_falcon
+from fastchat.model.model_yuan2 import generate_stream_yuan2
+from fastchat.model.model_exllama import generate_stream_exllama
+from fastchat.model.model_xfastertransformer import generate_stream_xft

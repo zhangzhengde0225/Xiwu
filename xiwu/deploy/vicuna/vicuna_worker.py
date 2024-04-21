@@ -14,7 +14,7 @@ except:
     from xiwu.version import __version__
 from xiwu import YamlConfig
 from xiwu.modules.models.vicuna import Vicuna
-from xiwu.modules.serve.cli import XChatIO
+from xiwu.modules.deployer.cli import XChatIO
 from xiwu import BaseArgs, XBaseModel
 import hepai
 from hepai import BaseWorkerModel

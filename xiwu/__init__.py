@@ -5,7 +5,8 @@
 
 from .version import __version__
 from .configs import constant as CONST
-# from .configs.configs import BaseArgs, ModelArgs, DataArgs, TrainingArgs
+from .modules.base import XConversation
+from .configs.configs import BaseArgs, ModelArgs, DataArgs, TrainingArgs
 from .modules.assembly_factory.assembler import XAssembler
 ASSEMBLER = XAssembler()
 

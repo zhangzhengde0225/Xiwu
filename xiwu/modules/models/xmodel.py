@@ -1,6 +1,4 @@
-"""
-Xiwu的基础模型，实现一些简单的功能
-"""
+
 from typing import Any
 from dataclasses import dataclass, field
 import os, sys
@@ -22,33 +20,34 @@ from xiwu.apis.fastchat_api import (
     Conversation,
     GptqConfig, AWQConfig, ExllamaConfig, XftConfig
 )
-from xiwu import CONST, ASSEMBLER
+from xiwu import CONST, ASSEMBLER, XConversation
 from xiwu.configs.configs import BaseArgs
 from ..adapters.adapt_oai import OAIAdapter
 
 
+
 @dataclass
-class XBaseModelArgs(BaseArgs):  # 继承了
+class XModelArgs(BaseArgs):  # 继承，拥有全部父类的属性
     pass
 
 
-class XBaseModel:
-    assembler = ASSEMBLER
+class XModel:
+    """
+    Xiwu Model that adapted to all models.
+    :param args: BaseArgs, the arguments for the model
+    """
 
     def __init__(self, args: BaseArgs=None, **kwargs) -> None:
-        self.args = args or XBaseModelArgs()
-        self.args = self._merge_args(**kwargs)
+        self.args = args or XModelArgs()
+        self.args = self._merge_args(**kwargs)  # 合并参数
+        self._adapter = None
         self._model, self._tokenizer = self._init_model_and_tokenizer()
         self._generate_stream_func = None
         self.name = self._init_model_name()
+        pass
 
     def _merge_args(self, **kwargs):
         self.args.__dict__.update(**kwargs)
-        # default_args = VicunaArgs()
-        # if args is not None:
-        #     default_args.__dict__.update(args.__dict__)
-        # default_args.__dict__.update(**kwargs)
-        # return default_args
         return self.args
         
 
@@ -64,6 +63,12 @@ class XBaseModel:
         return model_name
     
     @property
+    def adapter(self):
+        if self._adapter is None:
+            self._adapter = ASSEMBLER.get_model_adapter(self.args.model_path)
+        return self._adapter
+    
+    @property
     def model(self):
         if self._model is None:
             self._model, self._tokenizer = self.load_model()
@@ -77,9 +82,17 @@ class XBaseModel:
 
     @property
     def generate_stream_func(self):
-        return get_generate_stream_function(self.model, self.args.model_path)
+        if self._generate_stream_func is None:
+            self._generate_stream_func = ASSEMBLER.get_generate_stream_function(self.model, self.args.model_path)
+        return self._generate_stream_func
+        # return get_generate_stream_function(self.model, self.args.model_path)
 
+    def get_description(self):
+        return self.adapter.description
     
+    def get_author(self):
+        return self.adapter.author
+
     def search_local_model(self, model_path):
         """自动搜索本地权重，如果存在则返回本地路径，否则返回原路径"""
         if os.path.exists(f'{CONST.PRETRAINED_WEIGHTS_DIR}/{model_path}'):
@@ -168,7 +181,7 @@ class XBaseModel:
         """
         注意，这种方法是缓存信息到conv里的，适用于后台自动多轮会话
         """
-        conv = self.get_conv()
+        conv: XBaseConversation = self.get_conv()  # 
         # 读取messages中的系统消息
         for message in messages:
             role = message["role"]
@@ -176,6 +189,7 @@ class XBaseModel:
             if role == "system":
                 if content is not None and len(content) > 0:
                     conv.system = content
+                    # conv.system_message = content
             elif role == 'user':
                 conv.append_message(conv.roles[0], content)
             elif role == 'assistant':
@@ -188,9 +202,9 @@ class XBaseModel:
     def get_conv(self):
         conv_template = self.args.conv_template
         if conv_template:
-            return get_conv_template(conv_template)
+            return ASSEMBLER.get_conv_template(conv_template)
         else:
-            return get_conversation_template(self.args.model_path)
+            return ASSEMBLER.get_conversation_template(self.args.model_path)
     
     def get_prompt_by_conv(self, conv: Conversation):
         # is_chatglm = "chatglm" in self.args.model_path.lower()

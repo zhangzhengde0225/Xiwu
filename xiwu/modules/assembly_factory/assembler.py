@@ -1,6 +1,6 @@
 
 import os, sys
-from typing import Optional, List, Tuple
+from typing import Optional, List, Tuple, Dict
 from dataclasses import dataclass, field
 import warnings
 import math
@@ -17,27 +17,32 @@ from xiwu.apis.fastchat_api import (
     load_awq_quantized, load_gptq_quantized, load_exllama_model, load_xft_model,
     raise_warning_for_incompatible_cpu_offloading_configuration,
     replace_llama_attn_with_non_inplace_operations,
-    get_gpu_memory, str_to_torch_dtype
+    get_gpu_memory, str_to_torch_dtype,
+    generate_stream_chatglm, generate_stream_codet5p, generate_stream_falcon,
+    generate_stream_yuan2, generate_stream_exllama, generate_stream_xft
 )
-from ..adapters.base_adapter import XBaseModelAdapter
+from ..base.base_adapter import XBaseModelAdapter
 from ..adapters.xiwu_adapter import XiwuAdapter
 from ..adapters.vicuna_adapter import VicunaAdapter
-from ..adapters.conversation import xiwu_conv, vicuna_conv
 
+peft_share_base_weights = (
+    os.environ.get("PEFT_SHARE_BASE_WEIGHTS", "false").lower() == "true"
+)
 
 class XAssembler():
 
     def __init__(self):
         self.model_adapters: List[BaseModelAdapter] = model_adapters
         self.conv_templates: List[Conversation] = conv_templates
-        self._post_init()
-        pass
 
-    def _post_init(self):
-        self.register_model_adapter(XiwuAdapter, index=0)
+        self._post_register()
+
+    def _post_register(self):
+        self.register_model_adapter(XiwuAdapter, index=0)  # 注册适配器
         self.register_model_adapter(VicunaAdapter, index=0)
-        self.register_conv_template(xiwu_conv, override=False)
-        self.register_conv_template(vicuna_conv, override=True)
+
+        self.register_conv_template(XiwuAdapter.conv, override=False)
+        self.register_conv_template(VicunaAdapter.conv, override=True)
         
     def register_model_adapter(self, cls: BaseModelAdapter, index: Optional[int] = None):
         """Register a model adapter."""
@@ -72,9 +77,14 @@ class XAssembler():
 
         raise ValueError(f"No valid model adapter for {model_path}")
     
+    def get_conv_template(self, name: str) -> Conversation:
+        """Get a conversation template by name."""
+        return self.conv_templates[name].copy()
+
     def get_conversation_template(self, model_path: str) -> Conversation:
+        """Automatically get a conversation template for a model_path."""
         adapter = self.get_model_adapter(model_path)
-        return adapter.get_default_conv_template(model_path)
+        return adapter.get_default_conv_template()
 
     def load_model(self,
         model_path: str,
@@ -274,7 +284,6 @@ class XAssembler():
 
         return model, tokenizer
     
-
     def adapt_local_path(self, model_path):
         if os.path.exists(f'{CONST.PRETRAINED_WEIGHTS_DIR}/{model_path}'):
             model_path = f'{CONST.PRETRAINED_WEIGHTS_DIR}/{model_path}'
@@ -315,4 +324,86 @@ class XAssembler():
         )
         return tokenizer
 
+    def get_generate_stream_function(self, model: torch.nn.Module, model_path: str):
+        """Get the generate_stream function for inference."""
+        # 先从adapter里获取stream_function
+        adapter = self.get_model_adapter(model_path)
+        if hasattr(adapter, "generate_stream"):
+            return adapter.generate_stream
 
+        # 
+        from fastchat.serve.inference import generate_stream
+
+        model_type = str(type(model)).lower()
+        # such as: "<class 'transformers.models.llama.modeling_llama.llamaforcausallm'>"
+        is_peft = "peft" in model_type
+        is_chatglm = "chatglm" in model_type
+        is_falcon = "rwforcausallm" in model_type
+        is_codet5p = "codet5p" in model_type
+        is_exllama = "exllama" in model_type
+        is_xft = "xft" in model_type
+        is_yuan = "yuan" in model_type
+
+        if is_chatglm:
+            return generate_stream_chatglm
+        elif is_falcon:
+            return generate_stream_falcon
+        elif is_codet5p:
+            return generate_stream_codet5p
+        elif is_exllama:
+            return generate_stream_exllama
+        elif is_xft:
+            return generate_stream_xft
+        elif is_yuan:
+            return generate_stream_yuan2
+
+        elif peft_share_base_weights and is_peft:
+            # Return a curried stream function that loads the right adapter
+            # according to the model_name available in this context.  This ensures
+            # the right weights are available.
+            @torch.inference_mode()
+            def generate_stream_peft(
+                model,
+                tokenizer,
+                params: Dict,
+                device: str,
+                context_len: int,
+                stream_interval: int = 2,
+                judge_sent_end: bool = False,
+            ):
+                model.set_adapter(model_path)
+                base_model_type = str(type(model.base_model.model))
+                is_chatglm = "chatglm" in base_model_type
+                is_falcon = "rwforcausallm" in base_model_type
+                is_codet5p = "codet5p" in base_model_type
+                is_exllama = "exllama" in base_model_type
+                is_xft = "xft" in base_model_type
+                is_yuan = "yuan" in base_model_type
+
+                generate_stream_function = generate_stream
+                if is_chatglm:
+                    generate_stream_function = generate_stream_chatglm
+                elif is_falcon:
+                    generate_stream_function = generate_stream_falcon
+                elif is_codet5p:
+                    generate_stream_function = generate_stream_codet5p
+                elif is_exllama:
+                    generate_stream_function = generate_stream_exllama
+                elif is_xft:
+                    generate_stream_function = generate_stream_xft
+                elif is_yuan:
+                    generate_stream_function = generate_stream_yuan2
+                for x in generate_stream_function(
+                    model,
+                    tokenizer,
+                    params,
+                    device,
+                    context_len,
+                    stream_interval,
+                    judge_sent_end,
+                ):
+                    yield x
+
+            return generate_stream_peft
+        else:
+            return generate_stream

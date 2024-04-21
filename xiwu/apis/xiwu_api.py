@@ -1,9 +1,7 @@
 
 
-from ..modules.adapters.conversation import xiwu_conv, vicuna_conv
 from ..modules.adapters.xiwu_adapter import XiwuAdapter
 from ..modules.adapters.vicuna_adapter import VicunaAdapter
-from ..utils.patch_xiwu import patch_xiwu, patch_vicuna
 from ..utils.chat_logs import ChatLogs
 from ..modules.adapters.adapt_oai import OAIAdapter
 

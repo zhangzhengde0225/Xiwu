@@ -7,7 +7,8 @@ from xiwu import CONST
 
 
 class XBaseModelAdapter(BaseModelAdapter):
-    use_fast_tokenizer = True
+    description = 'This is a Large Lanuge Model'  # 是对模型的描述
+    author = "HepAI Team"  # 作者
 
     def load_model(self, model_path: str, from_pretrained_kwargs: dict):
         # 自动修改Model_PATH

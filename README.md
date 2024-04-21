@@ -37,19 +37,21 @@ pip install -r requirements.txt
 You can see the basic configurations in the [configs.py](xiwu/configs/configs.py) and [constant.py](xiwu/configs/constant.py) files.
 
 ## Deploy
-+ CLI Demo  
+#### CLI (Command Line Interface)  
 ```bash 
-python run_xiwu_cli.py \
-  --model_path xiwu/xiwu-13b-20230509 \
+python run_cli.py \
+  --model_path xiwu/xiwu-13b-16k-20240417 \
   --load_8bit False 
 ```
-For more available arguments, you can run `python run_xiwu_cli.py -h`.
+You and switch to any supported model. For more available arguments, you can run `python run_cli.py -h`.
 
-+ Deploy worker to a server
+### Deploy worker to get API.
 You should run a controller befor you run the worker.
 ```bash
-python run_xiwu_worker.py
+python run_worker.py \
+  --model_path xiwu/xiwu-13b-16k-20240417
 ```
+For more available arguments, you can run `python run_worker.py -h`.
 
 ### Trained Weights
 
