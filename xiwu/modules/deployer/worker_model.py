@@ -15,7 +15,7 @@ from xiwu.modules.models.xiwu_ import Xiwu
 from xiwu.apis.fastchat_api import Conversation
 import hepai
 from hepai import BaseWorkerModel
-from xiwu.modules.models.xmodel import XModel
+from xiwu.modules.base.xmodel import XModel
 from xiwu.utils import general
 
 

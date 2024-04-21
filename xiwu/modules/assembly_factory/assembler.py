@@ -331,7 +331,7 @@ class XAssembler():
         if hasattr(adapter, "generate_stream"):
             return adapter.generate_stream
 
-        # 
+        # 从fastchat中实现的stream_function获取
         from fastchat.serve.inference import generate_stream
 
         model_type = str(type(model)).lower()

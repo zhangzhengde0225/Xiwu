@@ -18,24 +18,9 @@ except:
     from xiwu.version import __version__
 from xiwu.apis import fastchat_api as fsapi
 from xiwu.apis.fastchat_api import *
-from xiwu.modules.models.base_model import XBaseModel
+from xiwu.modules.base.base_model import XBaseModel
 from xiwu.apis.xiwu_api import BaseArgs
 
-# conv_xiwu = fsapi.Conversation(
-#     system="""
-# You are Xiwu, Answer questions conversationally. Gives helpful, detailed, and polite answers to the user's questions.
-# """,
-#     roles=("user", "ASSISTANT","system"),
-#     messages=(),
-#     offset=0,
-#     sep_style=fsapi.SeparatorStyle.ADD_COLON_TWO,
-#     sep=" ",
-#     sep2="</s>",
-# )
-
-# # print(conv_xiwu)
-
-# fsapi.conv_templates['xiwu'] = conv_xiwu
 
 
 class Xiwu(XBaseModel):

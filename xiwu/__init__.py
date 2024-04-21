@@ -10,7 +10,7 @@ from .configs.configs import BaseArgs, ModelArgs, DataArgs, TrainingArgs
 from .modules.assembly_factory.assembler import XAssembler
 ASSEMBLER = XAssembler()
 
-from .modules.models.base_model import XBaseModel, XBaseModelArgs
+from .modules.base.base_model import XBaseModel, XBaseModelArgs
 # from .apis.xiwu_api import YamlConfig
 
 # PRETRAINED_WEIGHTS_DIR = YamlConfig.PRETRAINED_WEIGHTS_DIR

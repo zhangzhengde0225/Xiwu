@@ -16,7 +16,7 @@ try:
 except:
     sys.path.insert(1, str(here.parent.parent))
     from xiwu.version import __version__
-from xiwu.modules.models.base_model import XBaseModel
+from xiwu.modules.base.base_model import XBaseModel
 from xiwu import BaseArgs
 from xiwu.apis import fastchat_api as fsapi
 from xiwu.apis.fastchat_api import *

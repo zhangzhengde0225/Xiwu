@@ -181,7 +181,7 @@ class XModel:
         """
         注意，这种方法是缓存信息到conv里的，适用于后台自动多轮会话
         """
-        conv: XBaseConversation = self.get_conv()  # 
+        conv: XConversation = self.get_conv()  # 
         # 读取messages中的系统消息
         for message in messages:
             role = message["role"]
