@@ -33,7 +33,12 @@ Xiwu项目支持不同模型的统一接入，可通过命令行、API和Web三�
 ### 2.1. 适配逻辑
 
 适配逻辑如图所示：
-[适配逻辑图](../assets/adapter_logic.png)
+<div align="center">
+  <p>
+    <a href="https://ai.ihep.ac.cn/m/xiwu" target="_blank">
+      <img width="60%" src="../assets/adapter_logic.png" alt="适配逻辑图"></a>
+  </p>
+</div>
 
 关键的类如下：
 + XModel: 
@@ -44,7 +49,8 @@ Xiwu项目支持不同模型的统一接入，可通过命令行、API和Web三�
 + Adapters: 
     + 每个模型一个适配器，用于适配模型的输入输出
     + 每个适配器包含conv：XConversation，即对话格式模板
-    + 每个适配器包含
+    + 每个适配器需实现加载模型和生成对话流的方法
+    + 每个适配器包含description和author属性，用于描述模型的信息
 
 ### 2.1 XModel
 
@@ -105,9 +111,10 @@ Adapter需要实现`load_model`方法实现模型的加载，`generate_stream`�
 Adapter需要设置`conv`属性，来适配不同模型的对话格式。
 Adapter需要设置`description`和`author`属性，来描述模型的信息。
 
+例如：[xiwu_adapter.py](../xiwu/modules/adapters/xiwu_adapter.py)
+
 ## 4. 如何测试新模型
 
 在根目录下`python run_worker.py --model_path <新模型路径> --test`启动即可，如果已适配完成，Assembler或根据模型路径中包含的模型名匹配Adapter，然后加载模型，生成对话流。
-
 
 
