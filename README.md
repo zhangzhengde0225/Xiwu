@@ -46,7 +46,7 @@ You can run `./prepare_weights.sh --list_all` to see all available weights, and 
 ```
 
 ## Deploy
-#### CLI (Command Line Interface)  
+#### Run CLI (Command Line Interface) to interact with the model 
 ```bash 
 python run_cli.py \
   --model_path xiwu/xiwu-13b-16k-20240417 \
@@ -55,17 +55,22 @@ python run_cli.py \
 You and switch to any supported model. For more available arguments, you can run `python run_cli.py -h`.
 The assembler will automatically search the model in the `PRETRAINED_WEIGHTS_DIR` directory.
 
-### Deploy worker to host an API server.
-You should run a controller befor you run the worker.
+### Deploy a worker to host an API server
 ```bash
 python run_worker.py \
-  --model_path xiwu/xiwu-13b-16k-20240417
+  --model_path xiwu/xiwu-13b-16k-20240417 \
 ```
 For more available arguments, you can run `python run_worker.py -h`.
 
+After the worker is started, you can open a new terminal and access the model via by following script:
+```bash
+python request_api.py
+```
+Note that you should specify the `base_url` in the script to the address of the worker.
+Streaming API is also supported in this script.
 
 
-## Train on Custom Data
+## Train on Custom Data to get a new model
 
 ```bash
 bash scripts/train_xiwu.sh 
@@ -85,9 +90,9 @@ bash scripts/train_xiwu.sh
 
 If you are interested in contributing to Xiwu, please refer to the [Contributing Guidelines](docs/developer.md).
 
-Xiwu is authored by Zhengde Zhang, Yiyu Zhang, Haodong Yao, Jianwen Luo, Rui Zhao, Bo Huang, Jiameng Zhao, Yipu Liao, Ke Li, Lina Zhao, Fazhi Qi and Changzheng Yuan. 
+Currently, `Xiwu` is authored by Zhengde Zhang, Yiyu Zhang, Haodong Yao, Jianwen Luo, Rui Zhao, Bo Huang, Jiameng Zhao, Yipu Liao, Ke Li, Lina Zhao, Fazhi Qi and Changzheng Yuan. 
 
-Currently, it is maintained by Zhengde Zhang (zdzhang@ihep.ac.cn).
+it is maintained by Zhengde Zhang (zdzhang@ihep.ac.cn).
 
 # Acknowledgements
 

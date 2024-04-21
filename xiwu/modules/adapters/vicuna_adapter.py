@@ -29,7 +29,7 @@ class VicunaAdapter(XBaseModelAdapter):
     def match(self, model_path: str):
         return "vicuna" in model_path.lower()
 
-    def get_default_conv_template(self, model_path: str) -> Conversation:
+    def get_default_conv_template(self) -> Conversation:
         """
         hepai/vicuna-xxx
         """

@@ -60,11 +60,11 @@ class ModelArgs(BaseArgs):  # (1) 实现WorkerModel
 class WorkerArgs:  # (2) worker的参数配置和启动代码
     host: str = field(default="0.0.0.0", metadata={"help": "Worker's host ip address, enable to access from outside if set to `0.0.0.0`, otherwise only localhost can access"})
     port: str = field(default="auto", metadata={"help": "Worker's port, will be assigned automatically from 42902 to 42999 if set to `auto`"})
-    controller_address: str = field(default="https://aiapi.ihep.ac.cn", metadata={"help": "Controller's address"})
+    controller_address: str = field(default="http://localhost:42901", metadata={"help": "Controller's address"})
     worker_address: str = field(default="auto", metadata={"help": "Worker's address, default is http://<ip>:<port>."})
     limit_model_concurrency: int = field(default=5, metadata={"help": "Limit the model's concurrency"})
     stream_interval: float = field(default=0., metadata={"help": "Extra interval for stream response"})
-    no_register: bool = field(default=False, metadata={"help": "Do not register to controller"})
+    no_register: bool = field(default=True, metadata={"help": "Do not register to controller"})
     permissions: str = field(default='groups: public,PAYG; owner: hepai@ihep.ac.cn', metadata={"help": "Model's permissions, separated by ;, e.g., 'groups: public; users: a, b; owner: c'"})
     description: str = field(default=None, metadata={"help": "Model's description, automatically get from model adapter if not set"})
     author: str = field(default=None, metadata={"help": "Model's author, automatically get from model adapter if not set"})
