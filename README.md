@@ -75,6 +75,8 @@ bash scripts/train_xiwu.sh
 
 # Contributors
 
+If you are interested in contributing to Xiwu, please refer to the [Contributing Guidelines](docs/developer.md).
+
 Xiwu is authored by Zhengde Zhang, Yiyu Zhang, Haodong Yao, Jianwen Luo, Rui Zhao, Bo Huang, Jiameng Zhao, Yipu Liao, Ke Li, Lina Zhao, Fazhi Qi and Changzheng Yuan. 
 
 Currently, it is maintained by Zhengde Zhang (zdzhang@ihep.ac.cn).
