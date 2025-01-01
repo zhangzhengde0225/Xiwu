@@ -1,4 +1,6 @@
 
+trials/
+
 nohup.out*
 ./runs
 ./wandb

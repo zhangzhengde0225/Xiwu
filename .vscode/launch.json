@@ -11,10 +11,6 @@
             "program": "${file}",
             "console": "integratedTerminal",
             "justMyCode": false,
-            "args": [
-                // "--debug", "True"
-                // "--controller_address",  "http://127.0.0.1:42901"
-            ]
         },
         {
             "name": "Python: torchrun",
@@ -35,6 +31,18 @@
                 "${workspaceFolder}/your_script.py"
             ],
             // "pythonPath": "${command:python.interpreterPath}"
+        },
+        {
+            "name": "vllm deploy",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "serve",
+                "meta-llama/Llama-3.1-8B-Instruct"
+            ]
         }
     ]
 }

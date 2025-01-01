@@ -6,6 +6,7 @@ try:
     from fastchat import __version__
 except:
     fastchat_path = f'{here.parent}/repos/FastChat'
+    # 检查文件夹是否为空，如果是则提示下载方法
     sys.path.insert(1, fastchat_path)
     from fastchat import __version__
     print(f'fastchat not installed, use local in `{fastchat_path}` with version {__version__}')
