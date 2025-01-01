@@ -1,4 +1,4 @@
-from hepai import HepAI
+from hepai import HepAI, ChatCompletionChunk
 
 
 client = HepAI(base_url="http://localhost:8000/v1")
@@ -19,7 +19,12 @@ rst = client.chat.completions.create(
             # "content": "你是谁"
             "content": "tell me a story"
         }
-    ]
+    ],
+    stream=True,
 )
 
-print(rst)
+for chunk in rst:
+    chunk: ChatCompletionChunk = chunk
+    x = chunk.choices[0].delta.content
+    print(x, flush=True, end="")
+print()

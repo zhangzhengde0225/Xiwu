@@ -1,4 +1,6 @@
 
+tmp/
+outputs/
 trials/
 
 nohup.out*
