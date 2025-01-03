@@ -1,7 +1,11 @@
 
-from xiwu.apis.fastchat_api import (
-    Conversation, SeparatorStyle, register_conv_template,
-)
+
+
+try:
+    from xiwu.apis.fastchat_api import Conversation
+except:
+    Conversation = object
+    pass
 
 
 class XConversation(Conversation):

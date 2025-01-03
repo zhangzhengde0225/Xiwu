@@ -2,30 +2,29 @@ from typing import Optional
 import torch
 from transformers import AutoModelForCausalLM, AutoTokenizer, LlamaForCausalLM
 import warnings
-from xiwu.apis.fastchat_api import (
-    BaseModelAdapter, register_model_adapter,
-    Conversation, get_conv_template, conv_templates,
-    SeparatorStyle
-)
+from xiwu.apis.fastchat_api import *
 from ..base.base_adapter import XBaseModelAdapter
 from xiwu import XConversation
 
 
 class XiwuAdapter(XBaseModelAdapter):
     """Model adapater for Xiwu models"""
-    conv = XConversation(
-        name='xiwu',
-        system_message="""You are Xiwu, answer questions conversationally. Gives helpful, detailed, and polite answers to the user's questions.""",
-        roles=("USER", "ASSISTANT"),
-        offset=0,
-        messages=[],
-        sep_style=SeparatorStyle.ADD_COLON_TWO,
-        sep=" ",
-        sep2="</s>",
-    )
-    description = "HEP·Xiwu: a customized LLM for High Energy Physics"
-    author = "HepAI Team, IHEP, CAS"
-    use_fast_tokenizer = False
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.conv = XConversation(
+            name='xiwu',
+            system_message="""You are Xiwu, answer questions conversationally. Gives helpful, detailed, and polite answers to the user's questions.""",
+            roles=("USER", "ASSISTANT"),
+            offset=0,
+            messages=[],
+            sep_style=SeparatorStyle.ADD_COLON_TWO,
+            sep=" ",
+            sep2="</s>",
+        )
+        self.description = "HEP·Xiwu: a customized LLM for High Energy Physics"
+        self.author = "HepAI Team, IHEP, CAS"
+        self.use_fast_tokenizer = False
 
     def match(self, model_path: str):
         return "xiwu" in model_path.lower()

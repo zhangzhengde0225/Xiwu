@@ -1,4 +1,6 @@
 
+
+
 tmp/
 outputs/
 trials/
@@ -20,9 +22,10 @@ xiwu/data/data_acquisition_tools/seed_fission/error*
 data/*
 xiwu/scripts/*.txt
 xiwu/data/seed_fission/generated_data/*
+xiwu/repos/*
 
-./xiwu/__pycache__/*
-./xiwu/apis/__pycache__/*
+xiwu/__pycache__/
+xiwu/apis/__pycache__/
 
 .vscode
 

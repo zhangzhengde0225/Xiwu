@@ -10,17 +10,7 @@ from transformers import AutoModelForCausalLM, AutoTokenizer, AutoConfig
 
 import torch
 from xiwu import CONST
-from xiwu.apis.fastchat_api import (
-    model_adapters, conv_templates,
-    BaseModelAdapter, Conversation,
-    AWQConfig, GptqConfig, ExllamaConfig, XftConfig,
-    load_awq_quantized, load_gptq_quantized, load_exllama_model, load_xft_model,
-    raise_warning_for_incompatible_cpu_offloading_configuration,
-    replace_llama_attn_with_non_inplace_operations,
-    get_gpu_memory, str_to_torch_dtype,
-    generate_stream_chatglm, generate_stream_codet5p, generate_stream_falcon,
-    generate_stream_yuan2, generate_stream_exllama, generate_stream_xft
-)
+from xiwu.apis.fastchat_api import *
 from ..base.base_adapter import XBaseModelAdapter
 from ..adapters.xiwu_adapter import XiwuAdapter
 from ..adapters.vicuna_adapter import VicunaAdapter

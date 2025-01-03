@@ -6,6 +6,12 @@ client = HepAI(base_url="http://localhost:8000/v1")
 a = client.models.list()
 print(a)
 
+
+q = "tell me a story"
+q = "写一段cern root绘制直方图的代码，使用c++"
+
+
+
 rst = client.chat.completions.create(
     model="meta-llama/Llama-3.1-8B-Instruct",
     messages=[
@@ -17,7 +23,7 @@ rst = client.chat.completions.create(
             "role": "user",
             # "content": "sai hello"
             # "content": "你是谁"
-            "content": "tell me a story"
+            "content": q,
         }
     ],
     stream=True,
