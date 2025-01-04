@@ -52,7 +52,7 @@
             "console": "integratedTerminal",
             "justMyCode": false,
             "args": [
-                "./xiwu/eval/opencompass/eval_api_demo.py"
+                "${cwd}/xiwu/eval/opencompass/configs/eval_api_llama.py"
             ]
         }
     ]

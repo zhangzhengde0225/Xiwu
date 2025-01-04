@@ -29,7 +29,7 @@ with read_base():
     from opencompass.configs.datasets.mbpp_cn.mbpp_cn_gen import mbpp_cn_datasets
     
     # 多语言
-    from opencompass.configs.datasets.mgsm.mgsm_gen import mgsm_datasets
+    # from opencompass.configs.datasets.mgsm.mgsm_gen import mgsm_datasets  # 没有下载数据集
 
     # 工具使用  TODO, Opencompass中没有这个数据集
     # from opencompass.configs.datasets
@@ -38,9 +38,10 @@ with read_base():
 
 # datasets = gsm8k_datasets + math_datasets
 datasets = mmlu_datasets + mmlu_pro_datasets + ifeval_datasets + gpqa_datasets + \
-    humaneval_datasets + LCB_datasets + mbpp_datasets + mbpp_plus_datasets + \
+    humaneval_datasets + LCB_datasets + mbpp_datasets + mbpp_plus_datasets +\
     gsm8k_datasets + math_datasets + math_500_datasets + \
-    cmmlu_datasets + GaokaoBench_datasets + ceval_datasets + CMRC_datasets + mbpp_cn_datasets + \
-    mgsm_datasets
+    cmmlu_datasets + GaokaoBench_datasets + ceval_datasets + CMRC_datasets + mbpp_cn_datasets 
+    # mgsm_datasets
 
 models = llama_model
+
