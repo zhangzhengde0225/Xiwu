@@ -1,0 +1,3 @@
+[submodule "xiwu/repos/llama-factory"]
+	path = xiwu/repos/llama-factory
+	url = http://developer.sourcefind.cn/codes/OpenDAS/llama-factory.git
