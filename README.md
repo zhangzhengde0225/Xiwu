@@ -1,3 +1,5 @@
+
+
 [![Stars](https://img.shields.io/github/stars/zhangzhengde0225/Xiwu)](
 https://github.com/zhangzhengde0225/Xiwu)
 [![Open issue](https://img.shields.io/github/issues/zhangzhengde0225/Xiwu)](
@@ -16,7 +18,7 @@ https://github.com/zhangzhengde0225/Xiwu/archive/refs/heads/main.zip)
   </p>
 </div>
 
-This is the first LLM for HEP, an offitial implemention of [Xiwu(溪悟): A Basis Flexible and Learnable LLM for High Energy Physics](https://arxiv.org/abs/2404.08001). This model is designed to possess exceptional capabilities in common sense answering, BOSS code generation, and physical logical reasoning.
+This is the first LLM for HEP, an official implementation of [Xiwu(溪悟): A Basis Flexible and Learnable LLM for High Energy Physics](https://arxiv.org/abs/2404.08001). This model is designed to possess exceptional capabilities in common sense answering, BOSS code generation, and physical logical reasoning.
 
 Xi(溪): stremlet → drops of water, Wu(悟): understand and gaining insight
 
